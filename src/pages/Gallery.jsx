@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import gallerySections from "../data/gallery";
 import Lightbox from "../components/Lightbox";
 import useReveal from "../hooks/useReveal";
 
@@ -56,8 +56,6 @@ export default function Gallery() {
               தமிழ் மொழி மற்றும் இலக்கிய வளர்ச்சிக்காக அர்ப்பணிக்கப்பட்ட
               வாழ்க்கைப் பயணத்தின் முக்கியமான தருணங்களை நினைவுகூரும்
               புகைப்படத் தொகுப்பு. படத்தை சொடுக்கி பெரிதாகப் பாருங்கள்.
-              விருதுகள் மற்றும் அங்கீகாரங்களைப் பார்க்க{" "}
-              <Link to="/awards">விருதுகள் பக்கத்திற்குச்</Link> செல்லவும்.
             </p>
           </div>
         </div>
