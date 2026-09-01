@@ -1,0 +1,6283 @@
+/* ==========================================
+   TAMILANNAL WEBSITE — CLEAN FINAL STYLE
+   ONE PLAIN BACKGROUND • NO OVERLAP
+========================================== */
+
+:root {
+  --main-bg: #f7f3eb;
+  --paper: #fffdf8;
+  --text: #4c3828;
+  --muted-text: #705a48;
+  --maroon: #71341c;
+  --maroon-hover: #974d2a;
+  --gold: #b4823f;
+  --border: #ddc9a5;
+  --dark: #3e2114;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  background-color: var(--main-bg);
+  color: var(--text);
+  font-family: "Noto Sans Tamil", sans-serif;
+  line-height: 1.8;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+.container {
+  width: min(1120px, 90%);
+  margin: 0 auto;
+}
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.site-header {
+  position: sticky;
+  z-index: 1000;
+  top: 0;
+  border-bottom: 1px solid var(--border);
+  background-color: #fffdf8;
+  box-shadow: 0 2px 10px rgba(71, 43, 21, 0.06);
+}
+
+.top-line {
+  height: 4px;
+  background-color: var(--maroon);
+}
+
+.header-container {
+  width: min(1180px, 92%);
+  min-height: 82px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  margin: 0 auto;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.brand-circle {
+  width: 43px;
+  height: 43px;
+  display: grid;
+  place-items: center;
+  border: 2px solid var(--gold);
+  border-radius: 50%;
+  color: #fff9ed;
+  background-color: var(--maroon);
+  font-family: "Noto Serif Tamil", serif;
+  font-size: 23px;
+  font-weight: 700;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.35;
+}
+
+.brand-text strong {
+  color: var(--maroon);
+  font-family: "Noto Serif Tamil", serif;
+  font-size: 20px;
+}
+
+.brand-text small {
+  color: var(--muted-text);
+  font-size: 10px;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 4px;
+}
+
+.navigation a {
+  padding: 8px 10px;
+  border-bottom: 2px solid transparent;
+  color: #5b4431;
+  font-size: 13px;
+  transition: color 0.25s ease, border-color 0.25s ease;
+}
+
+.navigation a:hover,
+.navigation a.active {
+  border-bottom-color: var(--maroon);
+  color: var(--maroon);
+}
+
+.menu-button {
+  display: none;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: var(--maroon);
+  background-color: transparent;
+  font-size: 25px;
+  line-height: 1;
+  padding: 7px 10px;
+}
+
+/* ==========================================
+   HERO SECTION
+========================================== */
+
+.copper-hero-section {
+  padding: 72px 0 64px;
+  background-color: var(--main-bg);
+}
+
+.copper-hero-container {
+  width: min(850px, 90%);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.copper-top-ornament {
+  margin-bottom: 16px;
+  color: var(--gold);
+  font-family: "Noto Serif Tamil", serif;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.copper-plate {
+  position: relative;
+  padding: 50px 35px 43px;
+  border: 2px solid #80502c;
+  background-color: #b7783f;
+  box-shadow: 0 10px 24px rgba(77, 44, 18, 0.14);
+}
+
+.copper-corner {
+  position: absolute;
+  color: #f7dda2;
+  font-size: 18px;
+}
+
+.corner-one {
+  top: 11px;
+  left: 14px;
+}
+
+.corner-two {
+  top: 11px;
+  right: 14px;
+}
+
+.corner-three {
+  bottom: 11px;
+  left: 14px;
+}
+
+.corner-four {
+  right: 14px;
+  bottom: 11px;
+}
+
+.copper-small-title {
+  margin-bottom: 15px;
+  color: #42200e;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.copper-symbol {
+  width: 65px;
+  height: 65px;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 18px;
+  border: 2px solid #f3d184;
+  border-radius: 50%;
+  color: #ffe7aa;
+  background-color: var(--maroon);
+  font-family: "Noto Serif Tamil", serif;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.copper-plate h1 {
+  color: #3b1a0c;
+  font-family: "Noto Serif Tamil", serif;
+  font-size: clamp(30px, 5vw, 52px);
+  line-height: 1.35;
+}
+
+.copper-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 22px 0;
+  color: #4c230e;
+}
+
+.copper-divider span {
+  width: 90px;
+  height: 1px;
+  background-color: rgba(64, 29, 10, 0.65);
+}
+
+.copper-divider b {
+  font-size: 14px;
+}
+
+.copper-description {
+  max-width: 620px;
+  margin: 0 auto;
+  color: #442411;
+  font-size: 15px;
+  line-height: 2;
+}
+
+.copper-year-seal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 25px 0;
+  color: #47200c;
+}
+
+.copper-year-seal span {
+  font-size: 12px;
+}
+
+.copper-year-seal strong {
+  font-family: Georgia, serif;
+  font-size: 20px;
+}
+
+.copper-year-seal b {
+  color: #f8d98d;
+  font-size: 13px;
+}
+
+.copper-button {
+  display: inline-block;
+  padding: 10px 22px;
+  border: 1px solid #f1cf7d;
+  border-radius: 4px;
+  color: #fff8e9;
+  background-color: var(--maroon);
+  font-size: 14px;
+  transition: transform 0.25s ease, background-color 0.25s ease;
+}
+
+.copper-button:hover {
+  background-color: #51220f;
+  transform: translateY(-3px);
+}
+
+.archive-id {
+  margin-top: 17px;
+  color: #927451;
+  font-size: 9px;
+  letter-spacing: 1px;
+}
+
+/* Safety: old portrait styles will never show */
+
+.tamilannal-portrait-box {
+  display: none !important;
+}
+
+/* ==========================================
+   INTRODUCTION
+========================================== */
+
+.intro-section {
+  padding: 75px 0;
+  background-color: var(--main-bg);
+}
+
+.intro-section .container {
+  max-width: 780px;
+  text-align: center;
+}
+
+.section-small-title {
+  margin-bottom: 7px;
+  color: var(--maroon);
+  font-family: "Noto Serif Tamil", serif;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.intro-section h2,
+.section-heading h2 {
+  color: var(--dark);
+  font-family: "Noto Serif Tamil", serif;
+  font-size: clamp(25px, 3vw, 34px);
+  line-height: 1.4;
+}
+
+.gold-line {
+  width: 58px;
+  height: 2px;
+  margin: 19px 0 24px;
+  background-color: var(--gold);
+}
+
+.intro-section .gold-line {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.intro-section p:not(.section-small-title) {
+  margin-bottom: 14px;
+  color: var(--muted-text);
+  font-size: 15px;
+}
+
+.read-more-link {
+  display: inline-block;
+  margin-top: 8px;
+  border-bottom: 1px solid var(--maroon);
+  color: var(--maroon);
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.read-more-link:hover {
+  color: var(--maroon-hover);
+}
+
+/* ==========================================
+   BOOKS
+========================================== */
+
+.books-section {
+  padding: 72px 0 80px;
+  border-top: 1px solid #eadfc9;
+  background-color: var(--main-bg);
+}
+
+.section-heading {
+  margin-bottom: 38px;
+  text-align: center;
+}
+
+.center-line {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.book-card {
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background-color: var(--paper);
+  box-shadow: 0 5px 16px rgba(77, 45, 20, 0.08);
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+
+.book-card:hover {
+  box-shadow: 0 10px 22px rgba(77, 45, 20, 0.14);
+  transform: translateY(-6px);
+}
+
+.book-cover {
+  min-height: 230px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 22px;
+  color: #fff8e8;
+  font-family: "Noto Serif Tamil", serif;
+}
+
+.book-cover span {
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+.book-cover strong {
+  font-size: 21px;
+  line-height: 1.55;
+}
+
+.book-cover-one {
+  background-color: #743a23;
+}
+
+.book-cover-two {
+  background-color: #5e4a2e;
+}
+
+.book-cover-three {
+  background-color: #8d542d;
+}
+
+.book-details {
+  padding: 20px;
+}
+
+.book-details h3 {
+  margin-bottom: 8px;
+  color: var(--dark);
+  font-family: "Noto Serif Tamil", serif;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.book-details p {
+  color: var(--muted-text);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.center-button {
+  margin-top: 37px;
+  text-align: center;
+}
+
+.outline-button {
+  display: inline-block;
+  padding: 10px 21px;
+  border: 1px solid var(--maroon);
+  border-radius: 4px;
+  color: var(--maroon);
+  font-size: 14px;
+  transition: color 0.25s ease, background-color 0.25s ease;
+}
+
+.outline-button:hover {
+  color: #fff9ed;
+  background-color: var(--maroon);
+}
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+.site-footer {
+  padding: 30px 0;
+  border-top: 3px solid var(--maroon);
+  color: #eadcc8;
+  background-color: #432416;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.footer-content h3 {
+  margin-bottom: 3px;
+  color: #fff6e6;
+  font-family: "Noto Serif Tamil", serif;
+  font-size: 20px;
+}
+
+.footer-content p {
+  font-size: 12px;
+}
+
+/* ==========================================
+   LOADER — KEEP SIMPLE ANIMATION
+========================================== */
+
+.archive-loader {
+  position: fixed;
+  z-index: 99999;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background-color: #f7f3eb;
+  transition: opacity 0.45s ease, visibility 0.45s ease;
+}
+
+.loader-hide {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.loader-copper-plate {
+  width: min(290px, 80vw);
+  padding: 30px 20px;
+  border: 2px solid #9d6a37;
+  color: #4c2812;
+  background-color: #c58b4a;
+  text-align: center;
+  animation: simpleLoader 0.55s ease-out;
+}
+
+.loader-seal {
+  width: 60px;
+  height: 60px;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 13px;
+  border: 2px solid #f2d082;
+  border-radius: 50%;
+  color: #ffe9ac;
+  background-color: var(--maroon);
+  font-family: "Noto Serif Tamil", serif;
+  font-size: 28px;
+}
+
+.loader-copper-plate p {
+  color: #44200d;
+  font-family: "Noto Serif Tamil", serif;
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.loader-copper-plate span {
+  display: block;
+  margin-top: 5px;
+  font-size: 11px;
+}
+
+.loader-line {
+  width: 100%;
+  height: 2px;
+  margin-top: 18px;
+  background-color: rgba(68, 31, 12, 0.25);
+}
+
+.loader-line::after {
+  content: "";
+  display: block;
+  width: 55%;
+  height: 100%;
+  background-color: #fff0bb;
+  animation: loadingLine 1s linear infinite;
+}
+
+@keyframes simpleLoader {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes loadingLine {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(185%);
+  }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 900px) {
+  .header-container {
+    min-height: 74px;
+  }
+
+  .menu-button {
+    display: block;
+  }
+
+  .navigation {
+    position: absolute;
+    top: 78px;
+    right: 4%;
+    left: 4%;
+    display: none;
+    align-items: stretch;
+    flex-direction: column;
+    padding: 10px;
+    border: 1px solid var(--border);
+    background-color: #fffdf8;
+    box-shadow: 0 9px 20px rgba(57, 30, 12, 0.12);
+  }
+
+  .navigation.show {
+    display: flex;
+  }
+
+  .navigation a {
+    padding: 10px;
+    border-bottom: 1px solid #eee1cb;
+  }
+
+  .navigation a:last-child {
+    border-bottom: 0;
+  }
+
+  .book-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .brand-text small {
+    display: none;
+  }
+
+  .copper-hero-section {
+    padding: 48px 0;
+  }
+
+  .copper-plate {
+    padding: 37px 20px 32px;
+  }
+
+  .copper-small-title {
+    font-size: 11px;
+  }
+
+  .copper-description {
+    font-size: 13px;
+  }
+
+  .copper-year-seal {
+    gap: 7px;
+  }
+
+  .copper-year-seal strong {
+    font-size: 17px;
+  }
+
+  .copper-divider span {
+    width: 52px;
+  }
+
+  .intro-section,
+  .books-section {
+    padding: 55px 0;
+  }
+
+  .book-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-content {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+/* ==========================================
+   VINTAGE BROWN ARCHIVE LOOK
+   Paste at the END of style.css
+========================================== */
+
+:root {
+  --main-bg: #cbb486;
+  --paper: #e5d1a8;
+  --text: #4a301d;
+  --muted-text: #654831;
+  --maroon: #68331c;
+  --maroon-hover: #8b4929;
+  --gold: #a87836;
+  --border: #aa8756;
+  --dark: #3f2414;
+}
+
+/* One vintage brown background for whole website */
+
+body,
+.copper-hero-section,
+.intro-section,
+.books-section {
+  background-color: #cbb486 !important;
+}
+
+/* Header: old-paper shade */
+
+.site-header,
+.navigation {
+  background-color: #ddc69a !important;
+  border-color: #a98350 !important;
+}
+
+/* Simple vintage paper cards */
+
+.book-card {
+  border-color: #9d7949 !important;
+  background-color: #e5d1a8 !important;
+  box-shadow: 4px 5px 0 rgba(72, 42, 19, 0.18) !important;
+}
+
+.book-card:hover {
+  box-shadow: 6px 8px 0 rgba(72, 42, 19, 0.22) !important;
+}
+
+/* Hero copper plate: solid brown, no gradients */
+
+.copper-plate {
+  border: 3px solid #6a3c1e !important;
+  background-color: #a96832 !important;
+  box-shadow:
+    6px 8px 0 rgba(67, 37, 16, 0.28),
+    inset 0 0 0 3px rgba(232, 191, 109, 0.34) !important;
+}
+
+.copper-top-ornament {
+  color: #70411e;
+}
+
+.copper-small-title,
+.copper-plate h1,
+.copper-description,
+.copper-year-seal {
+  color: #3f200d !important;
+}
+
+.copper-symbol {
+  border-color: #e8bd62 !important;
+  color: #f8d888 !important;
+  background-color: #65301a !important;
+}
+
+.copper-divider span {
+  background-color: #522710 !important;
+}
+
+.copper-divider {
+  color: #522710 !important;
+}
+
+/* Vintage book covers */
+
+.book-cover-one {
+  background-color: #743e23 !important;
+}
+
+.book-cover-two {
+  background-color: #66502e !important;
+}
+
+.book-cover-three {
+  background-color: #8a4d29 !important;
+}
+
+/* Text colours */
+
+.brand-text strong,
+.navigation a.active,
+.navigation a:hover,
+.section-small-title,
+.read-more-link,
+.intro-section h2,
+.section-heading h2,
+.book-details h3 {
+  color: #633018 !important;
+}
+
+.brand-circle,
+.copper-button,
+button,
+.button,
+.hero-button,
+.submit-button,
+.article-read-button {
+  background-color: #68331c !important;
+}
+
+/* Footer: deep old-wood brown */
+
+.site-footer {
+  border-top-color: #8d5a29 !important;
+  color: #ead7af !important;
+  background-color: #3f2414 !important;
+}
+
+/* Loader keeps the vintage appearance */
+
+.archive-loader {
+  background-color: #cbb486 !important;
+}
+
+.loader-copper-plate {
+  border-color: #693b1c !important;
+  color: #45220e !important;
+  background-color: #aa6831 !important;
+}
+
+.loader-seal {
+  background-color: #65301a !important;
+}
+
+/* Remove every old heavy texture / overlap */
+
+.copper-hero-section::before,
+.copper-hero-section::after,
+.intro-section::before,
+.intro-section::after,
+.books-section::before,
+.books-section::after,
+.copper-plate::before,
+.copper-plate::after {
+  display: none !important;
+}
+/* ==========================================
+   DARK MAROON OLD-STYLE HERO ONLY
+   Paste at the END of style.css
+========================================== */
+
+/* Top hero section only */
+
+.copper-hero-section {
+  background-color: #4a201c !important;
+  border-bottom: 4px solid #8d6035;
+}
+
+/* Top archive title */
+
+.copper-top-ornament {
+  color: #e1bd72 !important;
+}
+
+/* Old maroon archive board */
+
+.copper-plate {
+  border: 2px solid #b6884c !important;
+  background-color: #6b3027 !important;
+  box-shadow:
+    6px 8px 0 rgba(25, 10, 8, 0.35),
+    inset 0 0 0 4px rgba(219, 178, 99, 0.16) !important;
+}
+
+/* Light text for dark maroon hero */
+
+.copper-small-title {
+  color: #e5c581 !important;
+}
+
+.copper-plate h1 {
+  color: #fff0c8 !important;
+}
+
+.copper-description {
+  color: #ead8aa !important;
+}
+
+.copper-year-seal {
+  color: #ecd39b !important;
+}
+
+.copper-year-seal b {
+  color: #d9ab55 !important;
+}
+
+.copper-divider {
+  color: #d9ab55 !important;
+}
+
+.copper-divider span {
+  background-color: #c9974f !important;
+}
+
+/* Central Tamil seal */
+
+.copper-symbol {
+  border-color: #e4bd69 !important;
+  color: #fff0b8 !important;
+  background-color: #4a1d18 !important;
+}
+
+/* Hero button */
+
+.copper-button {
+  border-color: #e4bc69 !important;
+  color: #fff2cf !important;
+  background-color: #4a1d18 !important;
+}
+
+.copper-button:hover {
+  color: #4a1d18 !important;
+  background-color: #ddb968 !important;
+}
+
+/* Archive ID under the hero */
+
+.archive-id {
+  color: #d9b87a !important;
+}
+/* ==========================================
+   SUBTLE VINTAGE ANIMATION — NO PHOTO
+========================================== */
+
+/* Full copper board enters softly */
+
+.copper-plate {
+  animation: vintagePlateEntry 0.9s ease-out both;
+}
+
+/* Tamil symbol has a small old-seal movement */
+
+.copper-symbol {
+  animation: vintageSealPulse 3s ease-in-out infinite;
+}
+
+/* Heading enters after the board */
+
+.copper-plate h1 {
+  animation: vintageTitleEntry 1s 0.25s ease-out both;
+}
+
+/* Description appears gently */
+
+.copper-description,
+.copper-year-seal,
+.copper-button {
+  animation: vintageTextEntry 0.8s 0.45s ease-out both;
+}
+
+/* Top title small subtle movement */
+
+.copper-top-ornament {
+  animation: vintageOrnament 3s ease-in-out infinite;
+}
+
+@keyframes vintagePlateEntry {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes vintageSealPulse {
+  0%,
+  100% {
+    transform: rotate(-2deg) scale(1);
+  }
+
+  50% {
+    transform: rotate(2deg) scale(1.045);
+  }
+}
+
+@keyframes vintageTitleEntry {
+  from {
+    opacity: 0;
+    transform: translateY(13px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes vintageTextEntry {
+  from {
+    opacity: 0;
+    transform: translateY(9px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes vintageOrnament {
+  0%,
+  100% {
+    opacity: 0.72;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Accessibility: no animation when user disables motion */
+
+@media (prefers-reduced-motion: reduce) {
+  .copper-plate,
+  .copper-symbol,
+  .copper-plate h1,
+  .copper-description,
+  .copper-year-seal,
+  .copper-button,
+  .copper-top-ornament {
+    animation: none !important;
+  }
+}
+/* ==========================================
+   VINTAGE SCROLL EFFECTS — ALL PAGES
+   NO BACKGROUND / COLOUR CHANGES
+========================================== */
+
+/* Initial hidden state */
+
+.vintage-reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+/* Active state */
+
+.vintage-reveal.show-vintage {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Cards appear with a little vintage lift */
+
+.vintage-card {
+  opacity: 0;
+  transform: translateY(20px) rotate(-0.4deg);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+
+.vintage-card.show-vintage {
+  opacity: 1;
+  transform: translateY(0) rotate(0deg);
+}
+
+/* Keep existing card hover effects smooth */
+
+.book-card,
+.full-book-card,
+.article-list-card,
+.author-card,
+.sidebar-box,
+.contact-information,
+.contact-form-box {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    opacity 0.7s ease !important;
+}
+
+/* Small gentle motion for buttons only */
+
+.copper-button,
+.outline-button,
+.read-more-link,
+.submit-button,
+.article-read-button {
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease,
+    background-color 0.25s ease,
+    color 0.25s ease !important;
+}
+
+/* Header enters gently when page opens */
+
+.site-header {
+  animation: vintageHeaderEntry 0.65s ease-out both;
+}
+
+@keyframes vintageHeaderEntry {
+  from {
+    opacity: 0;
+    transform: translateY(-14px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Motion accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+  .vintage-reveal,
+  .vintage-card,
+  .site-header {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
+}
+/* ==========================================
+   EXTRA VINTAGE EFFECTS — ALL PAGES
+   ANIMATION ONLY • NO BACKGROUND CHANGE
+========================================== */
+
+/* Small archive titles appear like ink writing */
+
+.vintage-reveal.show-vintage .section-small-title,
+.vintage-reveal.show-vintage .copper-small-title {
+  animation: oldInkReveal 0.75s ease-out both;
+}
+
+/* Main section headings come in softly */
+
+.vintage-reveal.show-vintage h2 {
+  animation: oldHeadingReveal 0.85s 0.1s ease-out both;
+}
+
+/* Decorative gold line grows from the centre */
+
+.vintage-reveal.show-vintage .gold-line {
+  transform-origin: center;
+  animation: oldLineGrow 0.8s 0.25s ease-out both;
+}
+
+/* Paragraph content comes after title */
+
+.vintage-reveal.show-vintage p:not(.section-small-title) {
+  animation: oldTextReveal 0.75s 0.2s ease-out both;
+}
+
+/* Book cover has a subtle old-record movement */
+
+.vintage-card.show-vintage .book-cover {
+  animation: bookCoverSettle 0.75s ease-out both;
+}
+
+/* Article and sidebar content comes in gently */
+
+.vintage-card.show-vintage .article-list-content,
+.vintage-card.show-vintage .book-details,
+.vintage-card.show-vintage .sidebar-box,
+.vintage-card.show-vintage .contact-info-item {
+  animation: oldTextReveal 0.65s 0.18s ease-out both;
+}
+
+/* Button press feels like an old archive seal */
+
+.copper-button:active,
+.outline-button:active,
+.submit-button:active,
+.article-read-button:active {
+  transform: translateY(2px) scale(0.97) !important;
+}
+
+/* Navigation links have a small traditional underline movement */
+
+.navigation a {
+  position: relative;
+}
+
+.navigation a::after {
+  content: "";
+  position: absolute;
+  right: 10px;
+  bottom: 3px;
+  left: 10px;
+  height: 1px;
+  background-color: currentColor;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.25s ease;
+}
+
+.navigation a:hover::after,
+.navigation a.active::after {
+  transform: scaleX(1);
+}
+
+/* Footer comes in once page finishes scrolling */
+
+.site-footer {
+  animation: oldFooterEntry 0.8s ease-out both;
+}
+
+/* Animation keyframes */
+
+@keyframes oldInkReveal {
+  from {
+    opacity: 0;
+    letter-spacing: 5px;
+    transform: translateY(7px);
+  }
+
+  to {
+    opacity: 1;
+    letter-spacing: 1px;
+    transform: translateY(0);
+  }
+}
+
+@keyframes oldHeadingReveal {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes oldLineGrow {
+  from {
+    transform: scaleX(0);
+  }
+
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes oldTextReveal {
+  from {
+    opacity: 0;
+    transform: translateY(9px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bookCoverSettle {
+  from {
+    opacity: 0;
+    transform: rotate(-2deg) translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: rotate(0deg) translateY(0);
+  }
+}
+
+@keyframes oldFooterEntry {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Stop every effect for users who prefer less movement */
+
+@media (prefers-reduced-motion: reduce) {
+  .vintage-reveal.show-vintage .section-small-title,
+  .vintage-reveal.show-vintage .copper-small-title,
+  .vintage-reveal.show-vintage h2,
+  .vintage-reveal.show-vintage .gold-line,
+  .vintage-reveal.show-vintage p:not(.section-small-title),
+  .vintage-card.show-vintage .book-cover,
+  .vintage-card.show-vintage .article-list-content,
+  .vintage-card.show-vintage .book-details,
+  .site-footer {
+    animation: none !important;
+  }
+}
+/* ==========================================
+   DEEPER VINTAGE ARCHIVE MEDIA EFFECTS
+   NO BACKGROUND OR LAYOUT CHANGE
+========================================== */
+
+/* Old photograph: slightly aged after it appears */
+
+.vintage-media.show-vintage-media {
+  animation: archiveMediaSettle 0.8s ease-out both;
+}
+
+/* Photos get an old printed-photo feeling */
+
+main img.vintage-media.show-vintage-media,
+.gallery-section img.vintage-media.show-vintage-media,
+.gallery-card img.vintage-media.show-vintage-media {
+  animation:
+    archiveMediaSettle 0.8s ease-out both,
+    oldPhotoBreathing 5s 1s ease-in-out infinite;
+}
+
+/* PDF/document cards look like preserved records */
+
+.pdf-card,
+.document-card,
+.pdf-item {
+  position: relative;
+}
+
+.pdf-card::before,
+.document-card::before,
+.pdf-item::before {
+  content: "காப்பகப் பதிவு";
+  position: absolute;
+  z-index: 2;
+  top: 10px;
+  right: 10px;
+  padding: 2px 7px;
+  border: 1px solid #875127;
+  color: #754018;
+  background-color: #e5cf9c;
+  font-family: "Noto Serif Tamil", serif;
+  font-size: 8px;
+  letter-spacing: 0.5px;
+  transform: rotate(2deg);
+}
+
+/* Small archive seal for PDF records */
+
+.pdf-card::after,
+.document-card::after,
+.pdf-item::after {
+  content: "TA";
+  position: absolute;
+  right: 13px;
+  bottom: 12px;
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  border: 2px double #e6bd6a;
+  border-radius: 50%;
+  color: #f7dc98;
+  background-color: #74351e;
+  box-shadow: 2px 2px 0 rgba(67, 34, 13, 0.22);
+  font-family: Georgia, serif;
+  font-size: 10px;
+  font-weight: bold;
+  transform: rotate(-8deg);
+}
+
+/* Archive seal moves slightly only when the document appears */
+
+.pdf-card.show-vintage-media::after,
+.document-card.show-vintage-media::after,
+.pdf-item.show-vintage-media::after {
+  animation: archiveSealSettle 0.7s 0.35s ease-out both;
+}
+
+/* PDF viewer looks like an old bound document */
+
+iframe.vintage-media.show-vintage-media,
+embed.vintage-media.show-vintage-media,
+.pdf-viewer.vintage-media.show-vintage-media {
+  box-shadow:
+    6px 8px 0 rgba(65, 34, 14, 0.25),
+    inset 0 0 0 2px rgba(112, 70, 29, 0.25) !important;
+}
+
+/* Keyframes */
+
+@keyframes archiveMediaSettle {
+  from {
+    opacity: 0;
+    transform: translateY(22px) rotate(-1.5deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+@keyframes oldPhotoBreathing {
+  0%,
+  100% {
+    filter: sepia(0.28) contrast(1.04) saturate(0.88);
+  }
+
+  50% {
+    filter: sepia(0.4) contrast(1.07) saturate(0.82);
+  }
+}
+
+@keyframes archiveSealSettle {
+  from {
+    opacity: 0;
+    transform: rotate(-28deg) scale(1.35);
+  }
+
+  to {
+    opacity: 1;
+    transform: rotate(-8deg) scale(1);
+  }
+}
+
+/* Disable all extra motion if needed */
+
+@media (prefers-reduced-motion: reduce) {
+  .vintage-media.show-vintage-media,
+  main img.vintage-media.show-vintage-media,
+  .gallery-section img.vintage-media.show-vintage-media,
+  .gallery-card img.vintage-media.show-vintage-media,
+  .pdf-card.show-vintage-media::after,
+  .document-card.show-vintage-media::after,
+  .pdf-item.show-vintage-media::after {
+    animation: none !important;
+  }
+}
+/* ==========================================
+   ABOUT PAGE — VINTAGE EFFECTS ONLY
+   NO BACKGROUND COLOUR CHANGE
+========================================== */
+
+/* Page title area */
+
+.page-banner {
+  padding: 62px 0 42px;
+  border-bottom: 1px solid var(--border);
+  text-align: center;
+}
+
+.page-banner p {
+  margin-bottom: 8px;
+  color: var(--maroon);
+  font-family: "Noto Serif Tamil", serif;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+}
+
+.page-banner h1 {
+  color: var(--dark);
+  font-family: "Noto Serif Tamil", serif;
+  font-size: clamp(34px, 5vw, 52px);
+  line-height: 1.35;
+}
+
+.breadcrumb {
+  display: flex;
+  justify-content: center;
+  gap: 9px;
+  margin-top: 18px;
+  color: var(--muted-text);
+  font-size: 12px;
+}
+
+.breadcrumb a {
+  color: var(--maroon);
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+/* Biography layout */
+
+.biography-section {
+  padding: 78px 0;
+}
+
+.biography-grid {
+  display: grid;
+  grid-template-columns: 290px 1fr;
+  align-items: start;
+  gap: 58px;
+}
+
+/* Profile placeholder: old archive seal */
+
+.profile-photo-box {
+  padding: 10px;
+  border: 2px solid #956735;
+  box-shadow: 5px 7px 0 rgba(67, 35, 14, 0.18);
+}
+
+.profile-photo-placeholder {
+  min-height: 310px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #a57a46;
+  color: #f3d995;
+  background-color: #69301f;
+  text-align: center;
+}
+
+.profile-photo-placeholder span {
+  width: 86px;
+  height: 86px;
+  display: grid;
+  place-items: center;
+  border: 3px double #e3bd6d;
+  border-radius: 50%;
+  font-family: "Noto Serif Tamil", serif;
+  font-size: 42px;
+  animation: aboutSealPulse 3.5s ease-in-out infinite;
+}
+
+.profile-photo-placeholder p {
+  margin-top: 17px;
+  font-size: 16px;
+}
+
+.photo-caption {
+  padding: 15px 10px 7px;
+  text-align: center;
+}
+
+.photo-caption h3 {
+  color: var(--dark);
+  font-family: "Noto Serif Tamil", serif;
+  font-size: 17px;
+}
+
+.photo-caption p {
+  margin-top: 3px;
+  color: var(--muted-text);
+  font-size: 12px;
+}
+
+/* Biography text */
+
+.biography-content h2 {
+  color: var(--dark);
+  font-family: "Noto Serif Tamil", serif;
+  font-size: clamp(27px, 3.2vw, 38px);
+  line-height: 1.4;
+}
+
+.biography-content > p:not(.section-small-title) {
+  margin-bottom: 17px;
+  color: var(--muted-text);
+  font-size: 15px;
+  line-height: 2;
+}
+
+.biography-content blockquote {
+  margin: 27px 0;
+  padding: 16px 20px;
+  border-left: 4px solid var(--gold);
+  color: #62371d;
+  font-family: "Noto Serif Tamil", serif;
+  font-size: 17px;
+  font-style: italic;
+  line-height: 1.9;
+}
+
+/* Timeline */
+
+.timeline-section {
+  padding: 76px 0;
+  border-top: 1px solid var(--border);
+}
+
+.timeline {
+  position: relative;
+  max-width: 850px;
+  margin: 42px auto 0;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  bottom: 5px;
+  left: 130px;
+  width: 1px;
+  background-color: #ad8249;
+}
+
+.timeline-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 105px 1fr;
+  gap: 48px;
+  padding-bottom: 33px;
+}
+
+.timeline-year {
+  position: relative;
+  z-index: 1;
+  min-height: 39px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #9d7140;
+  color: #fff0c3;
+  background-color: #6b321d;
+  box-shadow: 2px 3px 0 rgba(65, 34, 14, 0.17);
+  font-family: "Noto Serif Tamil", serif;
+  font-size: 14px;
+}
+
+.timeline-content {
+  position: relative;
+  top: -4px;
+  padding: 2px 0 10px 24px;
+  border-left: 2px solid #c49c5d;
+}
+
+.timeline-content h3 {
+  margin-bottom: 6px;
+  color: var(--dark);
+  font-family: "Noto Serif Tamil", serif;
+  font-size: 20px;
+}
+
+.timeline-content p {
+  color: var(--muted-text);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+/* Contributions */
+
+.contribution-section {
+  padding: 75px 0 82px;
+  border-top: 1px solid var(--border);
+}
+
+.contribution-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-top: 38px;
+}
+
+.contribution-card {
+  position: relative;
+  padding: 28px 23px;
+  border: 1px solid var(--border);
+  box-shadow: 4px 5px 0 rgba(68, 37, 15, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contribution-card:hover {
+  box-shadow: 6px 8px 0 rgba(68, 37, 15, 0.17);
+  transform: translateY(-5px) rotate(-0.3deg);
+}
+
+.contribution-card span {
+  display: block;
+  margin-bottom: 15px;
+  color: var(--gold);
+  font-family: Georgia, serif;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.contribution-card h3 {
+  margin-bottom: 9px;
+  color: var(--dark);
+  font-family: "Noto Serif Tamil", serif;
+  font-size: 20px;
+}
+
+.contribution-card p {
+  color: var(--muted-text);
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+/* Scroll-animation state */
+
+.about-vintage-reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.about-vintage-reveal.show-about-vintage {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.about-timeline-item {
+  opacity: 0;
+  transform: translateX(-18px);
+  transition: opacity 0.75s ease, transform 0.75s ease;
+}
+
+.about-timeline-item.show-about-vintage {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@keyframes aboutSealPulse {
+  0%,
+  100% {
+    transform: rotate(-2deg) scale(1);
+  }
+
+  50% {
+    transform: rotate(2deg) scale(1.05);
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 760px) {
+  .biography-grid {
+    grid-template-columns: 1fr;
+    gap: 38px;
+  }
+
+  .profile-photo-box {
+    width: min(290px, 100%);
+    margin: 0 auto;
+  }
+
+  .timeline::before {
+    left: 18px;
+  }
+
+  .timeline-item {
+    grid-template-columns: 74px 1fr;
+    gap: 20px;
+  }
+
+  .timeline-year {
+    font-size: 11px;
+  }
+
+  .timeline-content {
+    padding-left: 16px;
+  }
+
+  .contribution-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-vintage-reveal,
+  .about-timeline-item,
+  .profile-photo-placeholder span {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
+}
+/* ==========================================
+   ABOUT PAGE — EXTRA OLD ARCHIVE EFFECTS
+   NO BACKGROUND CHANGE
+========================================== */
+
+/* Page title appears like an old record heading */
+
+.page-banner h1 {
+  animation: archivePageTitle 0.9s ease-out both;
+}
+
+.page-banner p {
+  animation: archiveSmallText 0.7s ease-out both;
+}
+
+/* Breadcrumb appears after title */
+
+.breadcrumb {
+  animation: archiveBreadcrumb 0.7s 0.25s ease-out both;
+}
+
+/* Biography quote is like a handwritten note */
+
+.biography-content blockquote {
+  animation: archiveQuoteEntry 0.9s 0.25s ease-out both;
+}
+
+/* Gold underline grows in an old manuscript style */
+
+.biography-content .gold-line,
+.timeline-section .gold-line,
+.contribution-section .gold-line {
+  transform-origin: left center;
+  animation: archiveLineWrite 0.8s 0.2s ease-out both;
+}
+
+/* Timeline vertical line slowly draws downward */
+
+.timeline::before {
+  transform-origin: top;
+  animation: timelineLineDraw 1.4s ease-out both;
+}
+
+/* Year badges behave like archive seals */
+
+.about-timeline-item.show-about-vintage .timeline-year {
+  animation: archiveYearSeal 0.6s ease-out both;
+}
+
+/* Timeline content arrives after the seal */
+
+.about-timeline-item.show-about-vintage .timeline-content {
+  animation: archiveTimelineText 0.65s 0.18s ease-out both;
+}
+
+/* Contribution number has an old ink impression */
+
+.contribution-card span {
+  animation: archiveNumberInk 2.8s ease-in-out infinite;
+}
+
+/* Contribution card heading enters softly */
+
+.contribution-card.show-about-vintage h3,
+.contribution-card.show-vintage h3 {
+  animation: archiveCardHeading 0.7s ease-out both;
+}
+
+/* Keyframes */
+
+@keyframes archivePageTitle {
+  from {
+    opacity: 0;
+    letter-spacing: 8px;
+    transform: translateY(13px);
+  }
+
+  to {
+    opacity: 1;
+    letter-spacing: 0;
+    transform: translateY(0);
+  }
+}
+
+@keyframes archiveSmallText {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes archiveBreadcrumb {
+  from {
+    opacity: 0;
+    transform: translateY(7px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes archiveQuoteEntry {
+  from {
+    opacity: 0;
+    transform: translateX(-14px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes archiveLineWrite {
+  from {
+    transform: scaleX(0);
+  }
+
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes timelineLineDraw {
+  from {
+    transform: scaleY(0);
+  }
+
+  to {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes archiveYearSeal {
+  from {
+    opacity: 0;
+    transform: rotate(-12deg) scale(0.72);
+  }
+
+  to {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+  }
+}
+
+@keyframes archiveTimelineText {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes archiveNumberInk {
+  0%,
+  100% {
+    opacity: 0.75;
+    transform: rotate(-1deg);
+  }
+
+  50% {
+    opacity: 1;
+    transform: rotate(1deg);
+  }
+}
+
+@keyframes archiveCardHeading {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+  .page-banner h1,
+  .page-banner p,
+  .breadcrumb,
+  .biography-content blockquote,
+  .biography-content .gold-line,
+  .timeline-section .gold-line,
+  .contribution-section .gold-line,
+  .timeline::before,
+  .about-timeline-item.show-about-vintage .timeline-year,
+  .about-timeline-item.show-about-vintage .timeline-content,
+  .contribution-card span,
+  .contribution-card.show-about-vintage h3,
+  .contribution-card.show-vintage h3 {
+    animation: none !important;
+  }
+}
+/* ==========================================
+   CONTRIBUTION NUMBER — BROWN ARCHIVE SEAL
+========================================== */
+
+.contribution-card span {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 17px;
+  border: 2px solid #d7ad5e;
+  border-radius: 50%;
+  color: #f6dfaa !important;
+  background-color: #71371f;
+  box-shadow:
+    inset 0 0 0 3px rgba(57, 25, 12, 0.28),
+    3px 4px 0 rgba(64, 34, 14, 0.2);
+  font-family: Georgia, serif;
+  font-size: 19px !important;
+  font-weight: bold;
+}
+
+/* Small vintage seal motion */
+
+.contribution-card:hover span {
+  transform: rotate(-7deg) scale(1.06);
+  transition: transform 0.25s ease;
+}
+/* ==========================================
+   FULL CONTRIBUTION CARD — VINTAGE BROWN
+========================================== */
+
+.contribution-card {
+  border: 1px solid #b88b4a !important;
+  background-color: #75412a !important;
+  box-shadow:
+    5px 6px 0 rgba(64, 34, 14, 0.22),
+    inset 0 0 0 2px rgba(229, 191, 111, 0.12) !important;
+}
+
+/* Headings become light cream */
+
+.contribution-card h3 {
+  color: #ffe8ae !important;
+}
+
+/* Description becomes soft old-paper colour */
+
+.contribution-card p {
+  color: #ead2a3 !important;
+}
+
+/* Number seal gets a different contrast colour */
+
+.contribution-card span {
+  border-color: #e7c16c !important;
+  color: #633119 !important;
+  background-color: #e1b967 !important;
+  box-shadow:
+    inset 0 0 0 3px rgba(112, 59, 24, 0.16),
+    2px 3px 0 rgba(45, 20, 8, 0.24) !important;
+}
+
+/* Hover: old archive card lift */
+
+.contribution-card:hover {
+  background-color: #854b2f !important;
+}
+/* ==========================================
+   ABOUT PAGE TOP BANNER — FOOTER BROWN STYLE
+========================================== */
+
+.page-banner {
+  border-bottom: 3px solid #9b6832 !important;
+  color: #ead7af;
+  background-color: #3f2414 !important;
+}
+
+.page-banner p {
+  color: #d9b36a !important;
+}
+
+.page-banner h1 {
+  color: #fff0c9 !important;
+}
+
+.breadcrumb {
+  color: #ddc99b !important;
+}
+
+.breadcrumb a {
+  color: #e4bd70 !important;
+}
+
+.breadcrumb a:hover {
+  color: #fff0c9 !important;
+}
+
+/* ==========================================
+   ABOUT PAGE — ANTIQUE BOOKS BACKGROUND
+========================================== */
+
+.page-banner {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  padding: 62px 0 42px;
+  border-bottom: 3px solid #9b6832 !important;
+  background-image:
+    linear-gradient(
+      rgba(54, 28, 17, 0.84),
+      rgba(54, 28, 17, 0.84)
+    ),
+    url("/images/antique-books.jpg") !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: antiqueBannerEntry 0.9s ease-out both;
+}
+
+/* Keeps title and breadcrumb above the image */
+
+.page-banner .container {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.page-banner p {
+  margin-bottom: 8px;
+  color: #deb76d !important;
+  font-family: "Noto Serif Tamil", serif;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+}
+
+.page-banner h1 {
+  color: #fff0c9 !important;
+  font-family: "Noto Serif Tamil", serif;
+  font-size: clamp(34px, 5vw, 52px);
+  line-height: 1.35;
+  animation: antiqueTitleReveal 0.9s 0.18s ease-out both;
+}
+
+.breadcrumb {
+  display: flex;
+  justify-content: center;
+  gap: 9px;
+  margin-top: 18px;
+  color: #ddc99b !important;
+  font-size: 12px;
+  animation: antiqueBreadcrumbReveal 0.7s 0.35s ease-out both;
+}
+
+.breadcrumb a {
+  color: #e4bd70 !important;
+}
+
+.breadcrumb a:hover {
+  color: #fff0c9 !important;
+}
+
+/* Small and subtle old-library movement */
+
+@keyframes antiqueBannerEntry {
+  from {
+    opacity: 0;
+    background-position: center 10px;
+  }
+
+  to {
+    opacity: 1;
+    background-position: center;
+  }
+}
+
+@keyframes antiqueTitleReveal {
+  from {
+    opacity: 0;
+    letter-spacing: 6px;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    letter-spacing: 0;
+    transform: translateY(0);
+  }
+}
+
+@keyframes antiqueBreadcrumbReveal {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 650px) {
+  .page-banner {
+    padding: 48px 0 36px;
+    background-position: center;
+  }
+
+  .page-banner h1 {
+    font-size: 36px;
+  }
+}
+
+/* No animation when reduced motion is enabled */
+
+@media (prefers-reduced-motion: reduce) {
+  .page-banner,
+  .page-banner h1,
+  .breadcrumb {
+    animation: none !important;
+  }
+}
+/* ==========================================
+   BOOKS PAGE — VINTAGE LIBRARY EFFECTS
+   NO MAIN BACKGROUND CHANGE
+========================================== */
+
+/* Antique books image only for Books page banner */
+
+.books-page-banner {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background-image:
+    linear-gradient(
+      rgba(54, 28, 17, 0.82),
+      rgba(54, 28, 17, 0.82)
+    ),
+    url("/images/antique-books.jpg") !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: booksBannerEntry 0.9s ease-out both;
+}
+
+.books-page-banner .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Banner text vintage reveal */
+
+.books-page-banner h1 {
+  animation: booksTitleReveal 0.85s 0.15s ease-out both;
+}
+
+.books-page-banner .breadcrumb {
+  animation: booksBreadReveal 0.7s 0.32s ease-out both;
+}
+
+/* Intro heading slow archive reveal */
+
+.books-intro-section .section-heading {
+  animation: booksHeadingReveal 0.8s ease-out both;
+}
+
+/* Filter buttons: old archive stamp feel */
+
+.book-filter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 30px 0 38px;
+}
+
+.filter-button {
+  padding: 8px 15px;
+  border: 1px solid #87502b;
+  border-radius: 3px;
+  color: #66341c;
+  background-color: #e1c58e;
+  box-shadow: 2px 3px 0 rgba(67, 34, 14, 0.16);
+  font-family: "Noto Serif Tamil", serif;
+  font-size: 13px;
+  transition:
+    transform 0.25s ease,
+    background-color 0.25s ease,
+    color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.filter-button:hover {
+  color: #fff0ca;
+  background-color: #71341f;
+  transform: translateY(-3px) rotate(-1deg);
+}
+
+.filter-button.active-filter {
+  border-color: #dcb666;
+  color: #fff0ca;
+  background-color: #71341f;
+  box-shadow:
+    inset 0 0 0 2px rgba(235, 196, 111, 0.22),
+    3px 4px 0 rgba(67, 34, 14, 0.2);
+}
+
+/* Book card grid */
+
+.all-books-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+/* Full book card: preserved archive book */
+
+.full-book-card {
+  overflow: hidden;
+  border: 1px solid #9b7040;
+  background-color: #e5d1a8;
+  box-shadow: 5px 6px 0 rgba(67, 36, 15, 0.16);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    opacity 0.7s ease;
+}
+
+.full-book-card:hover {
+  box-shadow: 8px 10px 0 rgba(67, 36, 15, 0.2);
+  transform: translateY(-7px) rotate(-0.4deg);
+}
+
+/* Book cover: old bound-book opening effect */
+
+.full-book-cover {
+  position: relative;
+  min-height: 240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 23px;
+  border-bottom: 4px solid rgba(44, 20, 9, 0.38);
+  color: #fff2cd;
+  font-family: "Noto Serif Tamil", serif;
+  box-shadow: inset 10px 0 0 rgba(36, 16, 7, 0.2);
+  transition: transform 0.35s ease, filter 0.35s ease;
+}
+
+.full-book-cover::after {
+  content: "தமிழண்ணல்";
+  position: absolute;
+  right: 13px;
+  bottom: 12px;
+  color: rgba(255, 232, 180, 0.33);
+  font-family: "Noto Serif Tamil", serif;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+.full-book-card:hover .full-book-cover {
+  filter: brightness(1.08);
+  transform: scale(1.025);
+}
+
+.full-book-cover span {
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+.full-book-cover strong {
+  font-size: 22px;
+  line-height: 1.55;
+}
+
+.full-book-cover small {
+  font-size: 12px;
+  opacity: 0.85;
+}
+
+/* Keep all covers brown-family vintage colours */
+
+.cover-maroon {
+  background-color: #71341f;
+}
+
+.cover-brown {
+  background-color: #665031;
+}
+
+.cover-green {
+  background-color: #526044;
+}
+
+.cover-blue {
+  background-color: #455b62;
+}
+
+.cover-purple {
+  background-color: #654557;
+}
+
+.cover-orange {
+  background-color: #8a4b28;
+}
+
+/* Book details: old paper record */
+
+.full-book-content {
+  padding: 22px;
+}
+
+.book-category {
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 2px 8px;
+  border: 1px solid #b68d50;
+  color: #713a20;
+  background-color: #efd9a5;
+  font-family: "Noto Serif Tamil", serif;
+  font-size: 10px;
+}
+
+.full-book-content h3 {
+  margin-bottom: 9px;
+  color: #4a2817;
+  font-family: "Noto Serif Tamil", serif;
+  font-size: 19px;
+  line-height: 1.55;
+}
+
+.full-book-content > p:not(.book-category) {
+  min-height: 75px;
+  margin-bottom: 17px;
+  color: #694c34;
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+/* Book details button: archive seal press */
+
+.book-read-button {
+  padding: 8px 12px;
+  border: 1px solid #d5ad5e;
+  border-radius: 3px;
+  color: #fff0cd;
+  background-color: #6c321d;
+  box-shadow: 2px 3px 0 rgba(61, 28, 11, 0.22);
+  font-family: "Noto Serif Tamil", serif;
+  font-size: 12px;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.book-read-button:hover {
+  background-color: #8d492a;
+  transform: translateY(-2px);
+}
+
+.book-read-button:active {
+  transform: translateY(2px) scale(0.97);
+}
+
+/* Bottom note looks like a simple archive message */
+
+.book-note-section {
+  padding: 55px 0;
+  border-top: 1px solid #af8850;
+}
+
+.book-note-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 30px;
+  border: 1px solid #9c7040;
+  background-color: #dfc494;
+  box-shadow: 5px 6px 0 rgba(67, 36, 15, 0.14);
+}
+
+.book-note-box h2 {
+  margin-bottom: 7px;
+  color: #4b2817;
+  font-family: "Noto Serif Tamil", serif;
+  font-size: 25px;
+}
+
+.book-note-box > div > p:last-child {
+  color: #684a31;
+  font-size: 13px;
+}
+
+/* Keyframes */
+
+@keyframes booksBannerEntry {
+  from {
+    opacity: 0;
+    background-position: center 12px;
+  }
+
+  to {
+    opacity: 1;
+    background-position: center;
+  }
+}
+
+@keyframes booksTitleReveal {
+  from {
+    opacity: 0;
+    letter-spacing: 6px;
+    transform: translateY(13px);
+  }
+
+  to {
+    opacity: 1;
+    letter-spacing: 0;
+    transform: translateY(0);
+  }
+}
+
+@keyframes booksBreadReveal {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes booksHeadingReveal {
+  from {
+    opacity: 0;
+    transform: translateY(17px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .all-books-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .all-books-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .book-note-box {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .full-book-cover {
+    min-height: 215px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .books-page-banner,
+  .books-page-banner h1,
+  .books-page-banner .breadcrumb,
+  .books-intro-section .section-heading {
+    animation: none !important;
+  }
+
+  .full-book-card,
+  .full-book-cover,
+  .filter-button,
+  .book-read-button {
+    transition: none !important;
+  }
+}
+/* ==========================================
+   BOOK FILTER — VISIBLE VINTAGE ARCHIVE TABS
+========================================== */
+
+.book-filter {
+  display: flex !important;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin: 34px 0 42px !important;
+  padding: 16px;
+  border-top: 1px solid #a8783e;
+  border-bottom: 1px solid #a8783e;
+}
+
+/* All filter buttons always visible */
+
+.book-filter .filter-button {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  min-width: 135px;
+  padding: 10px 15px;
+  border: 2px solid #8b6035;
+  border-radius: 2px;
+  color: #512b16;
+  background-color: #dfc18a;
+  box-shadow:
+    3px 4px 0 rgba(66, 35, 14, 0.18),
+    inset 0 0 0 2px rgba(255, 234, 181, 0.3);
+  font-family: "Noto Serif Tamil", serif;
+  font-size: 13px;
+  font-weight: 600;
+  opacity: 1 !important;
+  visibility: visible !important;
+  transition:
+    transform 0.25s ease,
+    background-color 0.25s ease,
+    color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+/* Small archive mark before every filter */
+
+.book-filter .filter-button::before {
+  content: "✦";
+  margin-right: 7px;
+  color: #8a4c27;
+  font-size: 10px;
+}
+
+/* Each category gets a subtle different old-book tab shade */
+
+.book-filter .filter-button:nth-child(1) {
+  background-color: #d4b06d;
+}
+
+.book-filter .filter-button:nth-child(2) {
+  background-color: #d7bd89;
+}
+
+.book-filter .filter-button:nth-child(3) {
+  background-color: #cbb47c;
+}
+
+.book-filter .filter-button:nth-child(4) {
+  background-color: #d8c69a;
+}
+
+/* Active selection: dark archive seal */
+
+.book-filter .filter-button.active-filter {
+  border-color: #d9ae5c;
+  color: #fff0c7 !important;
+  background-color: #6b321d !important;
+  box-shadow:
+    4px 5px 0 rgba(58, 27, 10, 0.28),
+    inset 0 0 0 3px rgba(234, 194, 108, 0.18);
+  transform: translateY(-3px);
+}
+
+.book-filter .filter-button.active-filter::before {
+  color: #f2cf81;
+}
+
+/* Hover: antique book tab movement */
+
+.book-filter .filter-button:hover:not(.active-filter) {
+  color: #fff0ca;
+  background-color: #81502c;
+  box-shadow: 4px 6px 0 rgba(66, 35, 14, 0.2);
+  transform: translateY(-4px) rotate(-0.8deg);
+}
+
+.book-filter .filter-button:hover:not(.active-filter)::before {
+  color: #f4cf7e;
+}
+
+/* Click effect */
+
+.book-filter .filter-button:active {
+  transform: translateY(1px) scale(0.98);
+}
+
+/* Mobile: every category remains visible */
+
+@media (max-width: 600px) {
+  .book-filter {
+    gap: 9px;
+    padding: 13px 7px;
+  }
+
+  .book-filter .filter-button {
+    min-width: 145px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 370px) {
+  .book-filter .filter-button {
+    width: 100%;
+  }
+}
+/* ==========================================
+   BOOK FILTER — BRIGHT TEXT VISIBILITY FIX
+========================================== */
+
+/* All category buttons: dark background + bright text */
+
+.book-filter .filter-button,
+.book-filter .filter-button:nth-child(1),
+.book-filter .filter-button:nth-child(2),
+.book-filter .filter-button:nth-child(3),
+.book-filter .filter-button:nth-child(4) {
+  border-color: #e6bd67 !important;
+  color: #fff1c9 !important;
+  background-color: #6f351f !important;
+  text-shadow: 1px 1px 0 rgba(42, 18, 7, 0.35);
+}
+
+/* Bright icon */
+
+.book-filter .filter-button::before {
+  color: #ffd979 !important;
+}
+
+/* Selected button: brighter copper/gold */
+
+.book-filter .filter-button.active-filter {
+  border-color: #fff0ac !important;
+  color: #4b2511 !important;
+  background-color: #e0ae55 !important;
+  text-shadow: none;
+  box-shadow:
+    4px 5px 0 rgba(57, 25, 8, 0.28),
+    inset 0 0 0 3px rgba(255, 239, 176, 0.35) !important;
+}
+
+.book-filter .filter-button.active-filter::before {
+  color: #71341d !important;
+}
+
+/* Hover: brighter brown and clear text */
+
+.book-filter .filter-button:hover:not(.active-filter) {
+  color: #fff9df !important;
+  background-color: #96502e !important;
+}
+/* ==========================================
+   SAME DARK BROWN STYLE FOR ALL FILTERS
+   + CONTACT BUTTON
+========================================== */
+
+/* Active "அனைத்து நூல்கள்" also becomes dark brown */
+
+.book-filter .filter-button.active-filter {
+  border-color: #e6bd67 !important;
+  color: #fff1c9 !important;
+  background-color: #6f351f !important;
+  text-shadow: 1px 1px 0 rgba(42, 18, 7, 0.35);
+  box-shadow:
+    4px 5px 0 rgba(57, 25, 8, 0.28),
+    inset 0 0 0 3px rgba(235, 193, 107, 0.16) !important;
+}
+
+/* Active button icon */
+
+.book-filter .filter-button.active-filter::before {
+  color: #ffd979 !important;
+}
+
+/* Current selected filter gets only a gold top line */
+
+.book-filter .filter-button.active-filter {
+  border-top: 4px solid #ffd979 !important;
+}
+
+/* Note section "தொடர்புக்கு" button same dark-brown style */
+
+.book-note-box .hero-button {
+  display: inline-block;
+  padding: 10px 19px;
+  border: 2px solid #e6bd67 !important;
+  border-radius: 3px;
+  color: #fff1c9 !important;
+  background-color: #6f351f !important;
+  box-shadow:
+    3px 4px 0 rgba(57, 25, 8, 0.25),
+    inset 0 0 0 2px rgba(235, 193, 107, 0.14);
+  font-family: "Noto Serif Tamil", serif;
+  transition:
+    transform 0.25s ease,
+    background-color 0.25s ease;
+}
+
+.book-note-box .hero-button:hover {
+  color: #fff9df !important;
+  background-color: #96502e !important;
+  transform: translateY(-3px) rotate(-1deg);
+}
+
+.book-note-box .hero-button:active {
+  transform: translateY(1px) scale(0.97);
+}
+/* ==========================================
+   BOOKS BANNER EXTENDED — SAME IMAGE AREA
+========================================== */
+
+.books-page-banner {
+  padding-bottom: 48px !important;
+}
+
+.books-banner-intro {
+  max-width: 780px;
+  margin: 42px auto 0;
+  padding-top: 30px;
+  border-top: 1px solid rgba(232, 190, 105, 0.4);
+  text-align: center;
+  animation: booksBannerIntroReveal 0.8s 0.35s ease-out both;
+}
+
+.books-banner-intro .section-small-title {
+  color: #e5bc6e !important;
+}
+
+.books-banner-intro h2 {
+  color: #fff0c9 !important;
+  font-family: "Noto Serif Tamil", serif;
+  font-size: clamp(25px, 3vw, 34px);
+  line-height: 1.45;
+}
+
+.books-banner-intro .gold-line {
+  background-color: #ddb15e !important;
+}
+
+.books-banner-intro .books-intro-text {
+  margin-top: 22px;
+  color: #ead6a5 !important;
+  font-size: 15px;
+  line-height: 2;
+}
+
+@keyframes booksBannerIntroReveal {
+  from {
+    opacity: 0;
+    transform: translateY(13px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 600px) {
+  .books-page-banner {
+    padding-bottom: 37px !important;
+  }
+
+  .books-banner-intro {
+    margin-top: 31px;
+    padding-top: 25px;
+  }
+
+  .books-banner-intro .books-intro-text {
+    font-size: 13px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .books-banner-intro {
+    animation: none !important;
+  }
+}
+/* ==========================================
+   BOOKS PAGE — ARCHIVE RECORD DETAILS
+   VINTAGE EFFECT ONLY
+========================================== */
+
+/* Counts every book as an archive record */
+
+.all-books-grid {
+  counter-reset: book-record;
+}
+
+.full-book-card {
+  position: relative;
+  counter-increment: book-record;
+}
+
+/* Small record label on each book */
+
+.full-book-card::before {
+  content: "நூல் பதிவு " counter(book-record, decimal-leading-zero);
+  position: absolute;
+  z-index: 5;
+  top: 12px;
+  right: 12px;
+  padding: 3px 8px;
+  border: 1px solid rgba(255, 223, 149, 0.7);
+  color: #ffe8ad;
+  background-color: rgba(73, 30, 16, 0.88);
+  box-shadow: 2px 2px 0 rgba(35, 13, 6, 0.28);
+  font-family: "Noto Serif Tamil", serif;
+  font-size: 9px;
+  letter-spacing: 0.4px;
+  transform: rotate(2deg);
+}
+
+/* Record label reacts softly on hover */
+
+.full-book-card:hover::before {
+  color: #542511;
+  background-color: #e5bc68;
+  transform: rotate(-1deg) translateY(-2px);
+  transition:
+    color 0.25s ease,
+    background-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+/* Small official Tamilannal archive seal in Books banner */
+
+.books-page-banner::before {
+  content: "TA";
+  position: absolute;
+  z-index: 1;
+  top: 24px;
+  right: 8%;
+  width: 52px;
+  height: 52px;
+  display: grid !important;
+  place-items: center;
+  border: 3px double #e8c16d;
+  border-radius: 50%;
+  color: #ffe6a4;
+  background-color: rgba(76, 29, 16, 0.82);
+  box-shadow:
+    inset 0 0 0 3px rgba(213, 165, 78, 0.16),
+    3px 4px 0 rgba(28, 9, 5, 0.25);
+  font-family: Georgia, serif;
+  font-size: 16px;
+  font-weight: bold;
+  transform: rotate(-8deg);
+  animation: booksArchiveSealMove 4s ease-in-out infinite;
+}
+
+/* Container text always stays above image and seal layer */
+
+.books-page-banner .container {
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes booksArchiveSealMove {
+  0%,
+  100% {
+    transform: rotate(-8deg) translateY(0);
+  }
+
+  50% {
+    transform: rotate(-4deg) translateY(-4px);
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .books-page-banner::before {
+    top: 14px;
+    right: 6%;
+    width: 41px;
+    height: 41px;
+    font-size: 13px;
+  }
+
+  .full-book-card::before {
+    top: 10px;
+    right: 10px;
+    font-size: 8px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .books-page-banner::before {
+    animation: none !important;
+  }
+}
+/* ==========================================
+   ARTICLES PAGE — VINTAGE RESEARCH ARCHIVE
+========================================== */
+
+/* Antique books image only for Articles banner */
+
+.articles-page-banner {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background-image:
+    linear-gradient(
+      rgba(54, 28, 17, 0.85),
+      rgba(54, 28, 17, 0.85)
+    ),
+    url("/images/antique-essay.jpg") !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: articlesBannerEntry 0.9s ease-out both;
+}
+
+.articles-page-banner .container {
+  position: relative;
+  z-index: 2;
+}
+
+.articles-page-banner h1 {
+  color: #fff0c9 !important;
+  animation: articlesTitleReveal 0.85s 0.15s ease-out both;
+}
+
+.articles-page-banner > .container > p {
+  color: #e2b96c !important;
+}
+
+.articles-page-banner .breadcrumb {
+  color: #e4cfa0 !important;
+  animation: articlesBreadReveal 0.7s 0.32s ease-out both;
+}
+
+.articles-page-banner .breadcrumb a {
+  color: #f0ca78 !important;
+}
+
+/* Main content area */
+
+.articles-page-section {
+  padding: 76px 0 84px;
+  background-image: none !important;
+}
+
+.articles-page-section .section-heading {
+  margin-bottom: 42px;
+  text-align: center;
+  animation: articlesHeadingReveal 0.8s ease-out both;
+}
+
+.articles-page-intro {
+  max-width: 740px;
+  margin: 22px auto 0;
+  color: #684a31;
+  font-size: 15px;
+  line-height: 2;
+}
+
+/* Article list and sidebar layout */
+
+.articles-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 285px;
+  align-items: start;
+  gap: 32px;
+}
+
+/* Article list has record numbering */
+
+.article-list {
+  display: grid;
+  gap: 22px;
+  padding: 0 !important;
+  border: 0 !important;
+  outline: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  counter-reset: article-record;
+}
+
+.article-list::before {
+  display: none !important;
+}
+
+/* Old paper research document */
+
+.article-list-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 87px 1fr;
+  gap: 21px;
+  padding: 23px;
+  border: 1px solid #a77d49;
+  border-left: 7px solid #71341f;
+  background-color: #e4cea0 !important;
+  box-shadow: 5px 6px 0 rgba(67, 35, 14, 0.16);
+  counter-increment: article-record;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background-color 0.3s ease;
+}
+
+/* Archive record number */
+
+.article-list-card::before {
+  content: "பதிவு " counter(article-record, decimal-leading-zero);
+  position: absolute;
+  top: 11px;
+  right: 13px;
+  padding: 2px 7px;
+  border: 1px solid #aa7b40;
+  color: #754019;
+  background-color: #efd69d;
+  font-family: "Noto Serif Tamil", serif;
+  font-size: 9px;
+  transform: rotate(2deg);
+}
+
+.article-list-card:hover {
+  background-color: #ecd9ad !important;
+  box-shadow: 8px 9px 0 rgba(67, 35, 14, 0.2);
+  transform: translateY(-5px) rotate(-0.25deg);
+}
+
+/* Archive date seal */
+
+.article-date-box {
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  border: 2px solid #d9b465;
+  color: #ffe7ab;
+  background-color: #71341f !important;
+  box-shadow:
+    inset 0 0 0 3px rgba(235, 190, 103, 0.16),
+    3px 4px 0 rgba(62, 30, 11, 0.2);
+  font-family: "Noto Serif Tamil", serif;
+  line-height: 1.25;
+  transition: transform 0.25s ease;
+}
+
+.article-list-card:hover .article-date-box {
+  transform: rotate(-3deg) scale(1.04);
+}
+
+.article-date-box strong {
+  font-family: Georgia, serif;
+  font-size: 29px;
+}
+
+.article-date-box span {
+  margin-top: 2px;
+  font-size: 12px;
+}
+
+.article-date-box small {
+  margin-top: 4px;
+  color: #e7c984;
+  font-size: 10px;
+}
+
+/* Article writing */
+
+.article-list-content {
+  padding-top: 8px;
+}
+
+.article-type {
+  display: inline-block;
+  margin-bottom: 9px;
+  padding: 2px 8px;
+  border: 1px solid #b0874d;
+  color: #71371f;
+  background-color: #efd69b;
+  font-family: "Noto Serif Tamil", serif;
+  font-size: 10px;
+}
+
+.article-list-content h3 {
+  margin-bottom: 9px;
+  color: #4a2917;
+  font-family: "Noto Serif Tamil", serif;
+  font-size: 21px;
+  line-height: 1.55;
+}
+
+.article-list-content > p:not(.article-type) {
+  margin-bottom: 16px;
+  color: #684a31;
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+/* Read button: old official seal */
+
+.article-read-button {
+  padding: 8px 12px;
+  border: 1px solid #e0ba68 !important;
+  border-radius: 3px;
+  color: #fff0cb !important;
+  background-color: #6f351f !important;
+  box-shadow:
+    inset 0 0 0 2px rgba(235, 193, 107, 0.14),
+    2px 3px 0 rgba(55, 23, 9, 0.22);
+  font-family: "Noto Serif Tamil", serif;
+  font-size: 12px;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.article-read-button:hover {
+  color: #fff9df !important;
+  background-color: #934b2c !important;
+  transform: translateY(-2px);
+}
+
+.article-read-button:active {
+  transform: translateY(2px) scale(0.97);
+}
+
+/* Sidebar: old catalogue boxes */
+
+.articles-sidebar {
+  display: grid;
+  gap: 21px;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.articles-sidebar .sidebar-box {
+  padding: 22px;
+  border: 1px solid #9e7140;
+  background-color: #dfc493 !important;
+  box-shadow: 4px 5px 0 rgba(67, 35, 14, 0.15);
+}
+
+.articles-sidebar .sidebar-box h3 {
+  margin-bottom: 13px;
+  padding-bottom: 9px;
+  border-bottom: 1px solid #b58c50;
+  color: #4d2a17;
+  font-family: "Noto Serif Tamil", serif;
+  font-size: 19px;
+}
+
+.articles-sidebar .sidebar-box a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 0;
+  border-bottom: 1px dashed rgba(113, 65, 28, 0.32);
+  color: #63411f;
+  font-size: 12px;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.articles-sidebar .sidebar-box a:last-child {
+  border-bottom: 0;
+}
+
+.articles-sidebar .sidebar-box a:hover {
+  color: #813b21;
+  transform: translateX(3px);
+}
+
+.articles-sidebar .sidebar-box a span {
+  color: #8a4b25;
+  font-family: Georgia, serif;
+}
+
+/* Thirukkural box */
+
+.articles-sidebar .quote-box {
+  border-color: #a26935 !important;
+  color: #ffe6aa;
+  background-color: #62301f !important;
+}
+
+.articles-sidebar .quote-box p {
+  color: #f3db9e !important;
+  font-family: "Noto Serif Tamil", serif;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.articles-sidebar .quote-box span {
+  display: block;
+  margin-top: 12px;
+  color: #ddb568 !important;
+  font-size: 11px;
+  text-align: right;
+}
+
+/* Animations */
+
+@keyframes articlesBannerEntry {
+  from {
+    opacity: 0;
+    background-position: center 10px;
+  }
+
+  to {
+    opacity: 1;
+    background-position: center;
+  }
+}
+
+@keyframes articlesTitleReveal {
+  from {
+    opacity: 0;
+    letter-spacing: 6px;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    letter-spacing: 0;
+    transform: translateY(0);
+  }
+}
+
+@keyframes articlesBreadReveal {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes articlesHeadingReveal {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+
+@media (max-width: 850px) {
+  .articles-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .articles-sidebar {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .articles-sidebar .quote-box {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .articles-page-section {
+    padding: 55px 0;
+  }
+
+  .article-list-card {
+    grid-template-columns: 70px 1fr;
+    gap: 15px;
+    padding: 17px;
+  }
+
+  .article-date-box {
+    min-height: 82px;
+  }
+
+  .article-date-box strong {
+    font-size: 24px;
+  }
+
+  .article-list-content h3 {
+    padding-right: 0;
+    font-size: 17px;
+  }
+
+  .article-list-card::before {
+    top: auto;
+    right: 11px;
+    bottom: 10px;
+  }
+
+  .articles-sidebar {
+    grid-template-columns: 1fr;
+  }
+
+  .articles-sidebar .quote-box {
+    grid-column: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .articles-page-banner,
+  .articles-page-banner h1,
+  .articles-page-banner .breadcrumb,
+  .articles-page-section .section-heading {
+    animation: none !important;
+  }
+
+  .article-list-card,
+  .article-date-box,
+  .article-read-button,
+  .articles-sidebar .sidebar-box a {
+    transition: none !important;
+  }
+}
+/* ==========================================
+   ARTICLES BANNER EXTENDED — VINTAGE ARCHIVE
+========================================== */
+
+.articles-page-banner {
+  padding-bottom: 48px !important;
+  border-bottom: 3px solid #9b6832 !important;
+}
+
+/* Intro continues inside the same image banner */
+
+.articles-banner-intro {
+  max-width: 780px;
+  margin: 42px auto 0;
+  padding-top: 30px;
+  border-top: 1px solid rgba(232, 190, 105, 0.42);
+  text-align: center;
+  animation: articlesBannerIntroReveal 0.8s 0.35s ease-out both;
+}
+
+.articles-banner-intro .section-small-title {
+  color: #e5bc6e !important;
+}
+
+.articles-banner-intro h2 {
+  color: #fff0c9 !important;
+  font-family: "Noto Serif Tamil", serif;
+  font-size: clamp(25px, 3vw, 34px);
+  line-height: 1.45;
+}
+
+.articles-banner-intro .gold-line {
+  background-color: #ddb15e !important;
+}
+
+.articles-banner-intro .articles-page-intro {
+  max-width: 740px;
+  margin: 22px auto 0;
+  color: #ead6a5 !important;
+  font-size: 15px;
+  line-height: 2;
+}
+
+@keyframes articlesBannerIntroReveal {
+  from {
+    opacity: 0;
+    transform: translateY(13px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 600px) {
+  .articles-page-banner {
+    padding-bottom: 37px !important;
+  }
+
+  .articles-banner-intro {
+    margin-top: 31px;
+    padding-top: 25px;
+  }
+
+  .articles-banner-intro .articles-page-intro {
+    font-size: 13px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .articles-banner-intro {
+    animation: none !important;
+  }
+}
+/* ARTICLES SEARCH + READING TIME */
+
+.article-archive-tools {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin: 0 0 30px;
+  padding: 13px 16px;
+  border-top: 1px solid #a87a43;
+  border-bottom: 1px solid #a87a43;
+  color: #68421f;
+}
+
+.article-archive-tools p {
+  color: #6a4424;
+  font-family: "Noto Serif Tamil", serif;
+  font-size: 13px;
+}
+
+.article-archive-tools p span {
+  margin-right: 7px;
+  color: #75371e;
+  font-weight: 700;
+}
+
+.article-search-box input {
+  width: 230px;
+  padding: 8px 12px;
+  border: 1px solid #9f7040;
+  border-radius: 2px;
+  color: #55331d;
+  background-color: #ead5a5;
+  font-family: "Noto Sans Tamil", sans-serif;
+  font-size: 12px;
+  outline: none;
+}
+
+.article-search-box input:focus {
+  border-color: #71341f;
+}
+
+.article-reading-time {
+  margin: -2px 0 9px !important;
+  color: #8a5b2d !important;
+  font-family: "Noto Serif Tamil", serif;
+  font-size: 10px !important;
+}
+
+@media (max-width: 600px) {
+  .article-archive-tools {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .article-search-box input {
+    width: 100%;
+  }
+}
+/* ==========================================
+   GALLERY PAGE — VINTAGE PHOTO ARCHIVE
+========================================== */
+
+/* Same antique books banner format */
+
+.gallery-page-banner {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  padding-bottom: 48px !important;
+  border-bottom: 3px solid #9b6832 !important;
+  background-image:
+    linear-gradient(
+      rgba(54, 28, 17, 0.85),
+      rgba(54, 28, 17, 0.85)
+    ),
+    url("/images/antique-books.jpg") !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.gallery-page-banner .container {
+  position: relative;
+  z-index: 2;
+}
+
+.gallery-page-banner h1 {
+  color: #fff0c9 !important;
+  animation: galleryTitleReveal 0.85s 0.15s ease-out both;
+}
+
+.gallery-page-banner > .container > p {
+  color: #e2b96c !important;
+}
+
+.gallery-page-banner .breadcrumb {
+  color: #e4cfa0 !important;
+  animation: galleryBreadReveal 0.7s 0.3s ease-out both;
+}
+
+.gallery-page-banner .breadcrumb a {
+  color: #f0ca78 !important;
+}
+
+/* Intro continues inside the same banner image */
+
+.gallery-banner-intro {
+  max-width: 780px;
+  margin: 42px auto 0;
+  padding-top: 30px;
+  border-top: 1px solid rgba(232, 190, 105, 0.42);
+  text-align: center;
+  animation: galleryIntroReveal 0.8s 0.35s ease-out both;
+}
+
+.gallery-banner-intro .section-small-title {
+  color: #e5bc6e !important;
+}
+
+.gallery-banner-intro h2 {
+  color: #fff0c9 !important;
+  font-family: "Noto Serif Tamil", serif;
+  font-size: clamp(25px, 3vw, 34px);
+  line-height: 1.45;
+}
+
+.gallery-banner-intro .gold-line {
+  background-color: #ddb15e !important;
+}
+
+.gallery-banner-intro .gallery-intro {
+  max-width: 740px;
+  margin: 22px auto 0;
+  color: #ead6a5 !important;
+  font-size: 15px;
+  line-height: 2;
+}
+
+/* Gallery section */
+
+.gallery-page-section {
+  padding: 76px 0 84px;
+}
+
+/* Photo grid */
+
+.gallery-page-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  counter-reset: memory-record;
+}
+
+/* Old photograph card */
+
+.memory-card {
+  position: relative;
+  min-height: 295px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  border: 7px solid #dfc18b;
+  outline: 1px solid #7c4b28;
+  box-shadow:
+    6px 8px 0 rgba(65, 33, 13, 0.2),
+    0 10px 18px rgba(65, 33, 13, 0.1);
+  counter-increment: memory-record;
+  background-color: #765038;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: sepia(0.25) contrast(1.04) saturate(0.85);
+  transition:
+    transform 0.35s ease,
+    filter 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+/* Record label */
+
+.memory-card::before {
+  content: "நினைவுப் பதிவு " counter(memory-record, decimal-leading-zero);
+  position: absolute;
+  z-index: 2;
+  top: 11px;
+  left: 11px;
+  padding: 3px 7px;
+  border: 1px solid rgba(244, 213, 145, 0.75);
+  color: #ffedba;
+  background-color: rgba(73, 31, 16, 0.84);
+  box-shadow: 2px 2px 0 rgba(40, 15, 5, 0.2);
+  font-family: "Noto Serif Tamil", serif;
+  font-size: 9px;
+  transform: rotate(-2deg);
+}
+
+/* Temporary vintage colours until real images are added */
+
+.memory-one {
+  background-color: #704129;
+}
+
+.memory-two {
+  background-color: #6a5232;
+}
+
+.memory-three {
+  background-color: #585843;
+}
+
+.memory-four {
+  background-color: #7c4528;
+}
+
+.memory-five {
+  background-color: #5a4d38;
+}
+
+.memory-six {
+  background-color: #68372b;
+}
+
+/* Bottom text on photo */
+
+.memory-overlay {
+  width: 100%;
+  padding: 18px;
+  color: #fff0c7;
+  background-color: rgba(57, 24, 13, 0.82);
+  transform: translateY(0);
+  transition: background-color 0.3s ease;
+}
+
+.memory-overlay p {
+  margin-bottom: 5px;
+  color: #deb567;
+  font-family: "Noto Serif Tamil", serif;
+  font-size: 11px;
+}
+
+.memory-overlay h3 {
+  color: #fff0c7;
+  font-family: "Noto Serif Tamil", serif;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+/* Hover old-photo movement */
+
+.memory-card:hover {
+  z-index: 2;
+  box-shadow:
+    9px 12px 0 rgba(65, 33, 13, 0.23),
+    0 14px 23px rgba(65, 33, 13, 0.14);
+  filter: sepia(0.12) contrast(1.07) saturate(0.95);
+  transform: translateY(-8px) rotate(-1deg);
+}
+
+.memory-card:hover .memory-overlay {
+  background-color: rgba(78, 31, 15, 0.92);
+}
+
+/* Quote section */
+
+.memory-quote-section {
+  padding: 62px 0;
+  border-top: 1px solid #a97c44;
+  border-bottom: 1px solid #a97c44;
+}
+
+.memory-quote-content {
+  max-width: 820px;
+  text-align: center;
+}
+
+.memory-quote-content p {
+  color: #59351d;
+  font-family: "Noto Serif Tamil", serif;
+  font-size: clamp(20px, 3vw, 29px);
+  font-style: italic;
+  line-height: 1.8;
+}
+
+.memory-quote-content span {
+  display: block;
+  margin-top: 14px;
+  color: #8b5a2d;
+  font-size: 12px;
+}
+
+/* Animations */
+
+@keyframes galleryTitleReveal {
+  from {
+    opacity: 0;
+    letter-spacing: 6px;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    letter-spacing: 0;
+    transform: translateY(0);
+  }
+}
+
+@keyframes galleryBreadReveal {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes galleryIntroReveal {
+  from {
+    opacity: 0;
+    transform: translateY(13px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 900px) {
+  .gallery-page-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery-page-banner {
+    padding-bottom: 37px !important;
+  }
+
+  .gallery-banner-intro {
+    margin-top: 31px;
+    padding-top: 25px;
+  }
+
+  .gallery-banner-intro .gallery-intro {
+    font-size: 13px;
+  }
+
+  .gallery-page-section {
+    padding: 55px 0;
+  }
+
+  .gallery-page-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .memory-card {
+    min-height: 270px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gallery-page-banner h1,
+  .gallery-page-banner .breadcrumb,
+  .gallery-banner-intro,
+  .memory-card {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+/* ==========================================
+   GALLERY — OLD PHOTO DEVELOPING EFFECT
+========================================== */
+
+/* Initial hidden state */
+
+.memory-card.vintage-memory-reveal {
+  opacity: 0;
+  transform: translateY(24px) rotate(-2deg) scale(0.96);
+  filter: sepia(0.7) grayscale(0.5) brightness(0.7);
+  transition:
+    opacity 0.85s ease,
+    transform 0.85s ease,
+    filter 1s ease;
+}
+
+/* Photo becomes visible like an old developed print */
+
+.memory-card.vintage-memory-reveal.show-memory {
+  opacity: 1;
+  transform: translateY(0) rotate(0deg) scale(1);
+  filter: sepia(0.25) contrast(1.04) saturate(0.85);
+}
+
+/* Archive record label comes after photo */
+
+.memory-card.vintage-memory-reveal.show-memory::before {
+  animation: memoryRecordStamp 0.55s 0.45s ease-out both;
+}
+
+/* Caption rises after photo develops */
+
+.memory-card.vintage-memory-reveal.show-memory .memory-overlay {
+  animation: memoryCaptionReveal 0.65s 0.3s ease-out both;
+}
+
+@keyframes memoryRecordStamp {
+  from {
+    opacity: 0;
+    transform: rotate(-10deg) scale(1.25);
+  }
+
+  to {
+    opacity: 1;
+    transform: rotate(-2deg) scale(1);
+  }
+}
+
+@keyframes memoryCaptionReveal {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .memory-card.vintage-memory-reveal,
+  .memory-card.vintage-memory-reveal.show-memory,
+  .memory-card.vintage-memory-reveal.show-memory::before,
+  .memory-card.vintage-memory-reveal.show-memory .memory-overlay {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
+}
+/* ==========================================
+   GALLERY PHOTO BOX — VINTAGE ENTRY ANIMATION
+========================================== */
+
+/* Every photo card enters like an old photograph */
+
+.memory-card {
+  opacity: 0;
+  animation: vintagePhotoBoxEntry 0.8s ease-out forwards;
+}
+
+/* Cards appear one after another */
+
+.memory-card:nth-child(1) {
+  animation-delay: 0.15s;
+}
+
+.memory-card:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.memory-card:nth-child(3) {
+  animation-delay: 0.45s;
+}
+
+.memory-card:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+.memory-card:nth-child(5) {
+  animation-delay: 0.75s;
+}
+
+.memory-card:nth-child(6) {
+  animation-delay: 0.9s;
+}
+
+/* Old photo frame settling effect */
+
+@keyframes vintagePhotoBoxEntry {
+  from {
+    opacity: 0;
+    transform: translateY(28px) rotate(-3deg) scale(0.94);
+    filter: sepia(0.65) grayscale(0.35) brightness(0.75);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) rotate(0deg) scale(1);
+    filter: sepia(0.25) contrast(1.04) saturate(0.85);
+  }
+}
+
+/* Record label appears after box */
+
+.memory-card::before {
+  animation: vintageRecordLabel 0.5s 0.65s ease-out both;
+}
+
+@keyframes vintageRecordLabel {
+  from {
+    opacity: 0;
+    transform: rotate(-10deg) scale(1.2);
+  }
+
+  to {
+    opacity: 1;
+    transform: rotate(-2deg) scale(1);
+  }
+}
+
+/* No motion option */
+
+@media (prefers-reduced-motion: reduce) {
+  .memory-card,
+  .memory-card::before {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+    filter: none !important;
+  }
+}
+/* ==========================================
+   PHOTO CARD — GLASS LIGHT SHINE EFFECT
+========================================== */
+
+.memory-card {
+  position: relative;
+  cursor: pointer;
+  isolation: isolate;
+}
+
+/* Moving light reflection */
+
+.memory-card::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: -30%;
+  left: -75%;
+  width: 45%;
+  height: 165%;
+  pointer-events: none;
+  opacity: 0;
+  background: linear-gradient(
+    115deg,
+    transparent 0%,
+    rgba(255, 246, 210, 0.05) 28%,
+    rgba(255, 248, 220, 0.7) 50%,
+    rgba(255, 246, 210, 0.08) 72%,
+    transparent 100%
+  );
+  transform: skewX(-18deg);
+  transition: left 0.75s ease, opacity 0.2s ease;
+}
+
+/* Shine moves across photo */
+
+.memory-card:hover::after {
+  left: 135%;
+  opacity: 1;
+}
+
+/* Ensure text always stays above the light */
+
+.memory-card .memory-overlay,
+.memory-card::before {
+  z-index: 3;
+}
+
+.memory-card .memory-overlay {
+  position: relative;
+}
+
+/* Warm glow around the photo frame */
+
+.memory-card:hover {
+  border-color: #f1d18d;
+  box-shadow:
+    0 0 0 2px rgba(226, 176, 82, 0.28),
+    9px 12px 0 rgba(65, 33, 13, 0.23),
+    0 14px 28px rgba(160, 104, 43, 0.32);
+}
+/* ==========================================
+   PHOTO BOX LIFT EFFECT ON HOVER
+========================================== */
+
+/* Smooth lifting movement */
+
+.memory-card {
+  cursor: pointer;
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    filter 0.35s ease,
+    border-color 0.35s ease;
+}
+
+/* Mouse photo mela pona box lifts up */
+
+.memory-card:hover {
+  z-index: 10;
+  opacity: 1 !important;
+  border-color: #f0cb81;
+  box-shadow:
+    0 18px 30px rgba(58, 27, 11, 0.28),
+    0 7px 0 rgba(100, 53, 22, 0.18);
+  filter: sepia(0.12) contrast(1.08) saturate(1.05);
+  transform: translateY(-16px) scale(1.035) rotate(0deg) !important;
+}
+
+/* Caption also comes little up */
+
+.memory-card:hover .memory-overlay {
+  background-color: rgba(69, 27, 12, 0.94);
+  transform: translateY(-3px);
+}
+
+/* Touch devices: no unwanted hover movement */
+
+@media (hover: none) {
+  .memory-card:hover {
+    transform: none !important;
+  }
+}
+.memory-one {
+  background-image: url("/images/thamizhannal-youth.jpg");
+}
+.memory-two {
+  background-image: url("/images/thamizhannal-teaching.jpg");
+}
+.memory-four {
+  background-image: url("/images/thamizhannal-book-release.jpg");
+}
+.memory-six {
+  background-image: url("/images/thamizhannal-memory.jpg");
+}
+.memory-five {
+  background-image: url("/images/thamizhannal-tamil-event.jpg");
+}
+.memory-three {
+  background-image: url("/images/thamizhannal-research.jpg");
+}
+/* Awards page banner */
+
+.awards-page-banner {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 48px !important;
+  border-bottom: 3px solid #9b6832 !important;
+  background-image:
+    linear-gradient(
+      rgba(57, 30, 16, 0.87),
+      rgba(57, 30, 16, 0.87)
+    ),
+    url("/images/antique-books.jpg") !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.awards-page-banner > .container > p {
+  color: #e2b96c !important;
+}
+
+.awards-page-banner h1 {
+  color: #fff0c9 !important;
+}
+
+.awards-page-banner .breadcrumb {
+  color: #e4cfa0 !important;
+}
+
+.awards-page-banner .breadcrumb a {
+  color: #f0ca78 !important;
+}
+
+/* Heading inside banner */
+
+.awards-banner-intro {
+  max-width: 780px;
+  margin: 42px auto 0;
+  padding-top: 30px;
+  border-top: 1px solid rgba(232, 190, 105, 0.42);
+  text-align: center;
+}
+
+.awards-banner-intro .section-small-title {
+  color: #e5bc6e !important;
+}
+
+.awards-banner-intro h2 {
+  color: #fff0c9 !important;
+  font-family: "Noto Serif Tamil", serif;
+  font-size: clamp(25px, 3vw, 34px);
+  line-height: 1.5;
+}
+
+.awards-banner-intro .gold-line {
+  background-color: #ddb15e !important;
+}
+
+.awards-banner-intro .awards-intro-text {
+  max-width: 720px;
+  margin: 22px auto 0;
+  color: #ead6a5 !important;
+  font-size: 15px;
+  line-height: 2;
+}
+
+/* Awards cards */
+
+.awards-intro-section {
+  padding: 78px 0 82px;
+}
+
+.awards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.award-card {
+  min-height: 290px;
+  padding: 28px 22px;
+  border: 1px solid #c79b58;
+  background: linear-gradient(145deg, #fffaf0, #f2e2bf);
+  box-shadow: 5px 7px 0 rgba(100, 57, 25, 0.13);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.award-card:hover {
+  box-shadow: 0 18px 28px rgba(78, 39, 16, 0.18);
+  transform: translateY(-11px);
+}
+
+.award-icon {
+  display: grid;
+  width: 55px;
+  height: 55px;
+  margin-bottom: 20px;
+  place-items: center;
+  border: 2px solid #8e572d;
+  border-radius: 50%;
+  color: #fff0c6;
+  background: #75401f;
+  box-shadow: inset 0 0 0 4px #d9ae64;
+  font-family: "Noto Serif Tamil", serif;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.award-type {
+  color: #a66f31;
+  font-family: "Noto Serif Tamil", serif;
+  font-size: 12px;
+}
+
+.award-card h3 {
+  margin: 9px 0 12px;
+  color: #59351d;
+  font-family: "Noto Serif Tamil", serif;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.award-card > p:not(.award-type) {
+  color: #76573d;
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+@media (max-width: 1000px) {
+  .awards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .awards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .awards-page-banner {
+    padding-bottom: 37px !important;
+  }
+}
+/* ==========================================
+   AWARDS PAGE — PHOTO RECOGNITION CARDS
+========================================== */
+
+/* Awards section */
+
+.awards-showcase-section {
+  padding: 78px 0 88px;
+  background:
+    linear-gradient(
+      rgba(255, 251, 241, 0.93),
+      rgba(247, 235, 207, 0.93)
+    ),
+    url("/images/paper-texture.jpg");
+  background-repeat: repeat;
+}
+
+.awards-main-heading {
+  max-width: 820px;
+  margin: 0 auto 45px;
+  text-align: center;
+}
+
+.awards-main-heading h2 {
+  color: #59351d;
+  font-family: "Noto Serif Tamil", serif;
+  font-size: clamp(27px, 3vw, 38px);
+  line-height: 1.5;
+}
+
+.awards-showcase-intro {
+  max-width: 720px;
+  margin: 21px auto 0;
+  color: #77543a;
+  font-size: 14px;
+  line-height: 2;
+}
+
+/* Three-card grid */
+
+.awards-showcase-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 27px;
+}
+
+/* Main image card */
+
+.award-photo-card {
+  position: relative;
+  min-height: 405px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  border: 7px solid #dfc18b;
+  outline: 1px solid #8d592f;
+  background-color: #704129;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow:
+    7px 9px 0 rgba(75, 37, 14, 0.18),
+    0 10px 20px rgba(68, 31, 11, 0.12);
+  cursor: pointer;
+  filter: sepia(0.18) contrast(1.04) saturate(0.9);
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease,
+    filter 0.4s ease,
+    border-color 0.4s ease;
+}
+
+/* Dark gold photo overlay */
+
+.award-photo-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    to top,
+    rgba(54, 20, 8, 0.94) 0%,
+    rgba(71, 30, 11, 0.52) 45%,
+    rgba(52, 25, 10, 0.08) 75%,
+    rgba(40, 18, 7, 0.13) 100%
+  );
+  transition: background-color 0.4s ease;
+}
+
+/* Set the three photos */
+
+.award-general {
+  background-image: url("/images/award-general.jpg");
+}
+
+.award-honours {
+  background-image: url("/images/award-honours.jpg");
+}
+
+.award-world-tamil {
+  background-image: url("/images/award-world-tamil.jpg");
+}
+
+/* Text area */
+
+.award-photo-overlay {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding: 27px 25px;
+  color: #fff0c9;
+  transition: transform 0.4s ease;
+}
+
+.award-card-tag {
+  display: inline-block;
+  margin-bottom: 15px;
+  padding: 4px 9px;
+  border: 1px solid rgba(241, 202, 122, 0.75);
+  color: #f3d28d;
+  background-color: rgba(75, 31, 12, 0.58);
+  font-family: "Noto Serif Tamil", serif;
+  font-size: 10px;
+  letter-spacing: 0.3px;
+}
+
+.award-photo-overlay p {
+  margin-bottom: 7px;
+  color: #e7bb66;
+  font-family: "Noto Serif Tamil", serif;
+  font-size: 12px;
+}
+
+.award-photo-overlay h3 {
+  color: #fff1cd;
+  font-family: "Noto Serif Tamil", serif;
+  font-size: clamp(22px, 2.2vw, 28px);
+  line-height: 1.5;
+}
+
+.award-photo-line {
+  display: block;
+  width: 53px;
+  height: 2px;
+  margin: 15px 0;
+  background-color: #d9a950;
+  transition: width 0.4s ease;
+}
+
+.award-photo-overlay small {
+  display: block;
+  max-height: 0;
+  overflow: hidden;
+  color: #f0dfb5;
+  font-size: 12px;
+  line-height: 1.85;
+  opacity: 0;
+  transition:
+    max-height 0.45s ease,
+    opacity 0.3s ease;
+}
+
+/* Hover effect — card lifts and image zooms */
+
+.award-photo-card:hover {
+  z-index: 3;
+  border-color: #f0d08c;
+  box-shadow:
+    0 22px 32px rgba(65, 29, 10, 0.28),
+    9px 12px 0 rgba(96, 51, 20, 0.18);
+  filter: sepia(0.08) contrast(1.08) saturate(1.03);
+  transform: translateY(-15px) scale(1.02);
+}
+
+.award-photo-card:hover::before {
+  background: linear-gradient(
+    to top,
+    rgba(54, 20, 8, 0.96) 0%,
+    rgba(71, 30, 11, 0.65) 50%,
+    rgba(52, 25, 10, 0.13) 100%
+  );
+}
+
+.award-photo-card:hover .award-photo-overlay {
+  transform: translateY(-4px);
+}
+
+.award-photo-card:hover .award-photo-line {
+  width: 92px;
+}
+
+.award-photo-card:hover .award-photo-overlay small {
+  max-height: 100px;
+  opacity: 1;
+}
+
+/* Card entry animation */
+
+.award-photo-card {
+  opacity: 0;
+  animation: awardCardReveal 0.8s ease-out forwards;
+}
+
+.award-photo-card:nth-child(1) {
+  animation-delay: 0.12s;
+}
+
+.award-photo-card:nth-child(2) {
+  animation-delay: 0.28s;
+}
+
+.award-photo-card:nth-child(3) {
+  animation-delay: 0.44s;
+}
+
+@keyframes awardCardReveal {
+  from {
+    opacity: 0;
+    transform: translateY(25px) scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Tablet */
+
+@media (max-width: 950px) {
+  .awards-showcase-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .awards-showcase-section {
+    padding: 56px 0 62px;
+  }
+
+  .awards-showcase-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .award-photo-card {
+    min-height: 360px;
+  }
+
+  .award-photo-overlay small {
+    max-height: 100px;
+    opacity: 1;
+  }
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+  .award-photo-card,
+  .award-photo-card:hover,
+  .award-photo-overlay,
+  .award-photo-line,
+  .award-photo-overlay small {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
+}
+/* Awards page: short banner like other pages */
+
+.awards-page-banner {
+  padding-top: 72px !important;
+  padding-bottom: 72px !important;
+}
+
+@media (max-width: 600px) {
+  .awards-page-banner {
+    padding-top: 52px !important;
+    padding-bottom: 52px !important;
+  }
+}
+/* ==========================================
+   AWARDS — FULL CONTENT LONG BANNER
+========================================== */
+
+.awards-page-banner {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  padding: 90px 0 78px !important;
+  border-bottom: 3px solid #9b6832 !important;
+  background-image:
+    linear-gradient(
+      rgba(57, 30, 16, 0.84),
+      rgba(57, 30, 16, 0.9)
+    ),
+    url("/images/antique-books.jpg") !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.awards-page-banner .container {
+  position: relative;
+  z-index: 1;
+}
+
+.awards-banner-small-text {
+  margin-bottom: 13px;
+  color: #e4bb6c !important;
+  font-family: "Noto Serif Tamil", serif;
+  font-size: 14px;
+  letter-spacing: 0.3px;
+}
+
+.awards-page-banner h1 {
+  max-width: 780px;
+  color: #fff0c9 !important;
+  font-family: "Noto Serif Tamil", serif;
+  font-size: clamp(34px, 5vw, 57px);
+  line-height: 1.4;
+}
+
+.awards-page-banner .breadcrumb {
+  margin-top: 21px;
+  color: #ecd8a9 !important;
+}
+
+.awards-page-banner .breadcrumb a {
+  color: #f1ca78 !important;
+}
+
+/* Second heading area inside same books banner */
+
+.awards-banner-intro {
+  max-width: 790px;
+  margin: 48px auto 0;
+  padding-top: 32px;
+  border-top: 1px solid rgba(232, 190, 105, 0.45);
+  text-align: center;
+}
+
+.awards-banner-intro .section-small-title {
+  margin-bottom: 10px;
+  color: #e6bc6b !important;
+  font-family: "Noto Serif Tamil", serif;
+  font-size: 13px;
+}
+
+.awards-banner-intro h2 {
+  color: #fff0c9 !important;
+  font-family: "Noto Serif Tamil", serif;
+  font-size: clamp(26px, 3vw, 37px);
+  line-height: 1.52;
+}
+
+.awards-banner-intro .gold-line {
+  background-color: #ddb15e !important;
+}
+
+.awards-banner-intro .awards-intro-text {
+  max-width: 710px;
+  margin: 22px auto 0;
+  color: #ead7a7 !important;
+  font-size: 14px;
+  line-height: 2;
+}
+
+/* Main image cards section begins after banner */
+
+.awards-showcase-section {
+  padding: 75px 0 88px;
+  background-color: #fbf4e6;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .awards-page-banner {
+    padding: 66px 0 58px !important;
+  }
+
+  .awards-page-banner h1 {
+    font-size: 30px;
+  }
+
+  .awards-banner-intro {
+    margin-top: 34px;
+    padding-top: 25px;
+  }
+
+  .awards-banner-intro .awards-intro-text {
+    font-size: 13px;
+    line-height: 1.9;
+  }
+
+  .awards-showcase-section {
+    padding: 54px 0 62px;
+  }
+}
+/* Center the Awards page main title */
+
+.awards-page-banner h1 {
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
+.awards-page-banner .awards-banner-small-text {
+  text-align: center;
+}
+
+.awards-page-banner .breadcrumb {
+  justify-content: center;
+}
+/* ==========================================
+   AWARDS PAGE — LEGACY ORGANIZED SECTION
+========================================== */
+
+/* Light cream legacy background */
+
+.legacy-section {
+  padding: 84px 0 88px;
+  border-top: 1px solid #d9b97e;
+  background-color: #f8efdc;
+}
+
+/* Heading area */
+
+.legacy-top-heading {
+  max-width: 780px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+
+.legacy-top-heading .section-small-title {
+  color: #a76c2f;
+}
+
+.legacy-top-heading h2 {
+  margin-top: 7px;
+  color: #59351d;
+  font-family: "Noto Serif Tamil", serif;
+  font-size: clamp(27px, 3vw, 38px);
+  line-height: 1.55;
+}
+
+.legacy-top-heading > p:last-child {
+  max-width: 690px;
+  margin: 21px auto 0;
+  color: #75543a;
+  font-size: 14px;
+  line-height: 2;
+}
+
+/* Four legacy cards */
+
+.legacy-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.legacy-list-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 62px 1fr;
+  gap: 18px;
+  min-height: 137px;
+  padding: 23px;
+  overflow: hidden;
+  border: 1px solid #d0aa6c;
+  border-left: 4px solid #9c602d;
+  background: linear-gradient(135deg, #fffaf0, #f3e3bf);
+  box-shadow: 5px 6px 0 rgba(101, 55, 23, 0.1);
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+/* Subtle decorative number in background */
+
+.legacy-list-item::after {
+  content: "";
+  position: absolute;
+  top: -28px;
+  right: -18px;
+  width: 95px;
+  height: 95px;
+  border: 1px solid rgba(151, 93, 39, 0.12);
+  border-radius: 50%;
+}
+
+/* Number circle */
+
+.legacy-number {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  border: 1px solid #a66930;
+  border-radius: 50%;
+  color: #7a461f;
+  background-color: #f9e8bf;
+  box-shadow: inset 0 0 0 4px #fff7e4;
+  font-family: Georgia, serif;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.legacy-item-content {
+  position: relative;
+  z-index: 1;
+}
+
+.legacy-item-content h3 {
+  margin: 1px 0 8px;
+  color: #5b361e;
+  font-family: "Noto Serif Tamil", serif;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.legacy-item-content p {
+  color: #76573d;
+  font-size: 13px;
+  line-height: 1.85;
+}
+
+/* Lift effect */
+
+.legacy-list-item:hover {
+  z-index: 2;
+  border-color: #a4632c;
+  box-shadow:
+    0 15px 25px rgba(81, 40, 15, 0.16),
+    7px 9px 0 rgba(110, 57, 22, 0.13);
+  transform: translateY(-9px);
+}
+
+/* Final Tamil quote */
+
+.recognition-section {
+  padding: 82px 0;
+  text-align: center;
+  background-image:
+    linear-gradient(
+      rgba(65, 30, 13, 0.91),
+      rgba(65, 30, 13, 0.94)
+    ),
+    url("/images/antique-books.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.recognition-content {
+  max-width: 820px;
+}
+
+.recognition-label {
+  display: inline-block;
+  margin-bottom: 18px;
+  padding: 5px 16px;
+  border: 1px solid rgba(231, 185, 95, 0.72);
+  color: #e8bd69;
+  font-family: "Noto Serif Tamil", serif;
+  font-size: 12px;
+}
+
+.recognition-content h2 {
+  color: #fff0c9;
+  font-family: "Noto Serif Tamil", serif;
+  font-size: clamp(25px, 3vw, 37px);
+  line-height: 1.65;
+}
+
+.recognition-line {
+  width: 65px;
+  height: 2px;
+  margin: 20px auto;
+  background-color: #d8aa57;
+}
+
+.recognition-content p {
+  max-width: 690px;
+  margin: 0 auto;
+  color: #ead8aa;
+  font-size: 14px;
+  line-height: 2;
+}
+
+.recognition-sign {
+  display: block;
+  margin-top: 19px;
+  color: #e2b765;
+  font-family: "Noto Serif Tamil", serif;
+  font-size: 12px;
+}
+
+/* Mobile */
+
+@media (max-width: 700px) {
+  .legacy-section {
+    padding: 58px 0 62px;
+  }
+
+  .legacy-top-heading {
+    margin-bottom: 35px;
+  }
+
+  .legacy-list {
+    grid-template-columns: 1fr;
+  }
+
+  .legacy-list-item {
+    min-height: auto;
+  }
+
+  .recognition-section {
+    padding: 60px 0;
+  }
+}
+/* ==========================================
+   LEGACY — PHOTO MEMORY CARDS
+========================================== */
+
+/* Four photo cards */
+
+.legacy-memory-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+/* Main memory photo card */
+
+.legacy-memory-card {
+  position: relative;
+  min-height: 320px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  border: 7px solid #dfc18b;
+  outline: 1px solid #8d592f;
+  background-color: #704129;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow:
+    6px 8px 0 rgba(70, 33, 13, 0.18),
+    0 11px 20px rgba(69, 31, 11, 0.12);
+  cursor: pointer;
+  filter: sepia(0.23) contrast(1.04) saturate(0.87);
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease,
+    border-color 0.4s ease,
+    filter 0.4s ease;
+}
+
+/* Dark overlay for readable Tamil text */
+
+.legacy-memory-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    to top,
+    rgba(55, 22, 9, 0.94) 0%,
+    rgba(60, 26, 10, 0.55) 48%,
+    rgba(54, 24, 10, 0.08) 100%
+  );
+  transition: background-color 0.4s ease;
+}
+
+/* Connect photos */
+
+.legacy-research {
+  background-image: url("/images/legacy-research.jpg");
+}
+
+.legacy-guidance {
+  background-image: url("/images/legacy-guidance.jpg");
+}
+
+.legacy-language {
+  background-image: url("/images/legacy-language.jpg");
+}
+
+.legacy-culture {
+  background-image: url("/images/legacy-culture.jpg");
+}
+
+/* Bottom text content */
+
+.legacy-memory-overlay {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding: 24px 25px;
+  color: #fff0c9;
+  transition: transform 0.4s ease;
+}
+
+/* Vintage number label */
+
+.legacy-memory-number {
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 3px 9px;
+  border: 1px solid rgba(239, 200, 116, 0.7);
+  color: #f0c979;
+  background-color: rgba(65, 25, 9, 0.65);
+  font-family: Georgia, serif;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.legacy-memory-overlay h3 {
+  margin-bottom: 9px;
+  color: #fff0c9;
+  font-family: "Noto Serif Tamil", serif;
+  font-size: clamp(20px, 2vw, 25px);
+  line-height: 1.5;
+}
+
+.legacy-memory-overlay p {
+  max-width: 420px;
+  color: #eeddb4;
+  font-size: 13px;
+  line-height: 1.85;
+}
+
+/* Hover — card lifts and image becomes brighter */
+
+.legacy-memory-card:hover {
+  z-index: 3;
+  border-color: #f1d18d;
+  box-shadow:
+    0 21px 30px rgba(60, 26, 9, 0.26),
+    9px 12px 0 rgba(94, 48, 18, 0.18);
+  filter: sepia(0.08) contrast(1.08) saturate(1.03);
+  transform: translateY(-13px) scale(1.015);
+}
+
+.legacy-memory-card:hover::before {
+  background: linear-gradient(
+    to top,
+    rgba(55, 22, 9, 0.96) 0%,
+    rgba(60, 26, 10, 0.64) 55%,
+    rgba(54, 24, 10, 0.1) 100%
+  );
+}
+
+.legacy-memory-card:hover .legacy-memory-overlay {
+  transform: translateY(-4px);
+}
+
+/* Mobile */
+
+@media (max-width: 700px) {
+  .legacy-memory-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .legacy-memory-card {
+    min-height: 290px;
+  }
+}
+/* ==========================================
+   AWARDS — MULTI PHOTO VINTAGE GALLERY
+========================================== */
+
+.awards-gallery-section {
+  padding: 78px 0 90px;
+  background-color: #fbf4e6;
+}
+
+/* Each award group */
+
+.award-category-section {
+  padding: 0 0 72px;
+}
+
+.award-category-section + .award-category-section {
+  padding-top: 68px;
+  border-top: 1px solid #d9b77b;
+}
+
+/* Slightly darker paper colour for middle category */
+
+.award-category-highlight {
+  margin: 0 -20px 72px;
+  padding-right: 20px;
+  padding-left: 20px;
+  background-color: #f5e7cb;
+}
+
+.award-category-heading {
+  max-width: 740px;
+  margin: 0 auto 35px;
+  text-align: center;
+}
+
+.award-category-heading .section-small-title {
+  color: #a66c30;
+}
+
+.award-category-heading h2 {
+  margin-top: 7px;
+  color: #59351d;
+  font-family: "Noto Serif Tamil", serif;
+  font-size: clamp(28px, 3.4vw, 40px);
+  line-height: 1.5;
+}
+
+.award-category-heading .gold-line {
+  margin: 18px auto;
+}
+
+.award-category-heading > p:last-child {
+  margin: 0 auto;
+  color: #78573b;
+  font-size: 14px;
+  line-height: 2;
+}
+
+/* Photo grid */
+
+.award-memory-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 21px;
+}
+
+.award-memory-grid-two {
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Photo card */
+
+.award-memory-card {
+  position: relative;
+  min-height: 300px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  border: 7px solid #dfc18b;
+  outline: 1px solid #89542b;
+  background-color: #704129;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow:
+    6px 8px 0 rgba(71, 33, 12, 0.17),
+    0 11px 19px rgba(63, 29, 10, 0.12);
+  cursor: pointer;
+  filter: sepia(0.2) contrast(1.04) saturate(0.88);
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease,
+    filter 0.4s ease,
+    border-color 0.4s ease;
+}
+
+/* Text readability overlay */
+
+.award-memory-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    to top,
+    rgba(51, 20, 7, 0.95) 0%,
+    rgba(62, 26, 9, 0.59) 47%,
+    rgba(50, 21, 8, 0.06) 100%
+  );
+  transition: background 0.4s ease;
+}
+
+/* Connect local award photos */
+
+.award-photo-ponkizhi {
+  background-image: url("/images/award-ponkizhi.jpg");
+}
+
+.award-photo-teacher {
+  background-image: url("/images/award-good-teacher.jpg");
+}
+
+.award-photo-vkg {
+  background-image: url("/images/award-vkg.jpg");
+}
+
+.award-photo-mgr {
+  background-image: url("/images/award-mgr.jpg");
+}
+
+.award-photo-paarivendhar {
+  background-image: url("/images/award-paarivendhar.jpg");
+}
+
+.award-photo-tholkappiyar {
+  background-image: url("/images/award-tholkappiyar.jpg");
+}
+
+.award-photo-world-tamil-one {
+  background-image: url("/images/award-world-tamil-1.jpg");
+}
+
+.award-photo-world-tamil-two {
+  background-image: url("/images/award-world-tamil-2.jpg");
+}
+
+/* Card content */
+
+.award-memory-overlay {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding: 20px;
+  color: #fff0c9;
+  transition: transform 0.4s ease;
+}
+
+.award-memory-overlay span {
+  display: inline-block;
+  margin-bottom: 9px;
+  padding: 3px 8px;
+  border: 1px solid rgba(237, 196, 108, 0.72);
+  color: #f0c979;
+  background-color: rgba(67, 26, 9, 0.66);
+  font-family: "Noto Serif Tamil", serif;
+  font-size: 10px;
+}
+
+.award-memory-overlay h3 {
+  color: #fff0c9;
+  font-family: "Noto Serif Tamil", serif;
+  font-size: 19px;
+  line-height: 1.5;
+}
+
+.award-memory-overlay p {
+  max-height: 0;
+  margin-top: 0;
+  overflow: hidden;
+  color: #eedcb1;
+  font-size: 12px;
+  line-height: 1.8;
+  opacity: 0;
+  transition:
+    max-height 0.4s ease,
+    margin-top 0.4s ease,
+    opacity 0.35s ease;
+}
+
+/* Hover: photo lifts, card grows, description opens */
+
+.award-memory-card:hover {
+  z-index: 3;
+  border-color: #f0d08c;
+  box-shadow:
+    0 20px 30px rgba(59, 26, 8, 0.27),
+    8px 11px 0 rgba(93, 47, 17, 0.17);
+  filter: sepia(0.08) contrast(1.08) saturate(1.03);
+  transform: translateY(-14px) scale(1.02);
+}
+
+.award-memory-card:hover::before {
+  background: linear-gradient(
+    to top,
+    rgba(51, 20, 7, 0.96) 0%,
+    rgba(62, 26, 9, 0.68) 56%,
+    rgba(50, 21, 8, 0.09) 100%
+  );
+}
+
+.award-memory-card:hover .award-memory-overlay {
+  transform: translateY(-4px);
+}
+
+.award-memory-card:hover .award-memory-overlay p {
+  max-height: 70px;
+  margin-top: 8px;
+  opacity: 1;
+}
+
+/* Responsive */
+
+@media (max-width: 1050px) {
+  .award-memory-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .awards-gallery-section {
+    padding: 55px 0 64px;
+  }
+
+  .award-category-section {
+    padding-bottom: 56px;
+  }
+
+  .award-category-section + .award-category-section {
+    padding-top: 55px;
+  }
+
+  .award-category-highlight {
+    margin-right: -12px;
+    margin-left: -12px;
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+
+  .award-memory-grid,
+  .award-memory-grid-two {
+    grid-template-columns: 1fr;
+  }
+
+  .award-memory-card {
+    min-height: 290px;
+  }
+
+  /* Mobile-la description always visible */
+
+  .award-memory-overlay p {
+    max-height: 70px;
+    margin-top: 8px;
+    opacity: 1;
+  }
+}
+/* ==========================================
+   CONTACT PAGE — VINTAGE CONTACT DESIGN
+========================================== */
+
+/* Long antique-books banner */
+
+.contact-page-banner {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  padding: 90px 0 78px !important;
+  border-bottom: 3px solid #9b6832 !important;
+  background-image:
+    linear-gradient(
+      rgba(57, 30, 16, 0.84),
+      rgba(57, 30, 16, 0.91)
+    ),
+    url("/images/antique-books.jpg") !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.contact-page-banner .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Top small text */
+
+.contact-banner-small-text {
+  margin-bottom: 13px;
+  color: #e4bb6c !important;
+  text-align: center;
+  font-family: "Noto Serif Tamil", serif;
+  font-size: 14px;
+}
+
+/* Main page title */
+
+.contact-page-banner h1 {
+  margin-right: auto;
+  margin-left: auto;
+  color: #fff0c9 !important;
+  text-align: center;
+  font-family: "Noto Serif Tamil", serif;
+  font-size: clamp(34px, 5vw, 57px);
+  line-height: 1.4;
+}
+
+/* Breadcrumb center */
+
+.contact-page-banner .breadcrumb {
+  display: flex;
+  justify-content: center;
+  margin-top: 21px;
+  color: #ecd8a9 !important;
+}
+
+.contact-page-banner .breadcrumb a {
+  color: #f1ca78 !important;
+}
+
+/* Second title inside same banner */
+
+.contact-banner-intro {
+  max-width: 770px;
+  margin: 48px auto 0;
+  padding-top: 32px;
+  border-top: 1px solid rgba(232, 190, 105, 0.45);
+  text-align: center;
+}
+
+.contact-banner-intro .section-small-title {
+  margin-bottom: 10px;
+  color: #e6bc6b !important;
+  font-family: "Noto Serif Tamil", serif;
+  font-size: 13px;
+}
+
+.contact-banner-intro h2 {
+  color: #fff0c9 !important;
+  font-family: "Noto Serif Tamil", serif;
+  font-size: clamp(26px, 3vw, 37px);
+  line-height: 1.52;
+}
+
+.contact-banner-intro .gold-line {
+  background-color: #ddb15e !important;
+}
+
+.contact-banner-intro > p:last-child {
+  max-width: 690px;
+  margin: 22px auto 0;
+  color: #ead7a7 !important;
+  font-size: 14px;
+  line-height: 2;
+}
+
+/* Main contact section */
+
+.contact-page-section {
+  padding: 82px 0 88px;
+  background-color: #fbf4e6;
+}
+
+.contact-page-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 56px;
+  align-items: start;
+}
+
+/* Left contact information */
+
+.contact-information {
+  padding: 12px 0;
+}
+
+.contact-information .section-small-title {
+  color: #a4692e;
+}
+
+.contact-information h2 {
+  margin-top: 9px;
+  color: #59351d;
+  font-family: "Noto Serif Tamil", serif;
+  font-size: clamp(25px, 3vw, 35px);
+  line-height: 1.55;
+}
+
+.contact-description {
+  margin-top: 22px;
+  color: #75543a;
+  font-size: 14px;
+  line-height: 2;
+}
+
+/* Contact detail list */
+
+.contact-info-list {
+  display: grid;
+  gap: 15px;
+  margin-top: 31px;
+}
+
+.contact-info-item {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  padding: 17px;
+  border: 1px solid #d3ad70;
+  border-left: 4px solid #9e612e;
+  background-color: #fffaf0;
+  box-shadow: 3px 4px 0 rgba(95, 49, 19, 0.08);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.contact-info-item:hover {
+  z-index: 1;
+  background-color: #fffdf8;
+  box-shadow:
+    0 11px 19px rgba(77, 38, 14, 0.13),
+    5px 6px 0 rgba(103, 54, 20, 0.1);
+  transform: translateY(-5px);
+}
+
+/* Icon circle */
+
+.contact-icon {
+  display: grid;
+  flex: 0 0 46px;
+  width: 46px;
+  height: 46px;
+  place-items: center;
+  border: 1px solid #9a5e2c;
+  border-radius: 50%;
+  color: #fff0c9;
+  background-color: #71401f;
+  box-shadow: inset 0 0 0 4px #d8ad62;
+  font-size: 19px;
+}
+
+.contact-info-item h3 {
+  margin-bottom: 4px;
+  color: #5d371d;
+  font-family: "Noto Serif Tamil", serif;
+  font-size: 16px;
+}
+
+.contact-info-item p {
+  color: #75563d;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* Right contact form box */
+
+.contact-form-box {
+  padding: 34px;
+  border: 1px solid #c69552;
+  border-top: 5px solid #8d5529;
+  background:
+    linear-gradient(
+      145deg,
+      #fffaf0 0%,
+      #f2dfb7 100%
+    );
+  box-shadow:
+    7px 9px 0 rgba(92, 46, 18, 0.13),
+    0 12px 22px rgba(80, 38, 13, 0.09);
+}
+
+.contact-form-box h2 {
+  color: #59351d;
+  font-family: "Noto Serif Tamil", serif;
+  font-size: 26px;
+}
+
+.contact-form-box > p {
+  margin: 11px 0 26px;
+  color: #79583c;
+  font-size: 13px;
+  line-height: 1.85;
+}
+
+/* Form fields */
+
+.contact-form {
+  display: grid;
+  gap: 17px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.form-group {
+  display: grid;
+  gap: 7px;
+}
+
+.form-group label {
+  color: #663d20;
+  font-family: "Noto Serif Tamil", serif;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  border: 1px solid #cda669;
+  border-radius: 0;
+  outline: none;
+  color: #56361f;
+  background-color: rgba(255, 253, 247, 0.82);
+  font-family: "Noto Sans Tamil", sans-serif;
+  font-size: 13px;
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    background-color 0.25s ease;
+}
+
+.form-group input {
+  height: 47px;
+  padding: 0 13px;
+}
+
+.form-group textarea {
+  min-height: 135px;
+  padding: 13px;
+  resize: vertical;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #a78a6b;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #8e5429;
+  background-color: #fffdf8;
+  box-shadow: 0 0 0 3px rgba(183, 128, 57, 0.16);
+}
+
+/* Send button */
+
+.submit-button {
+  justify-self: start;
+  margin-top: 3px;
+  padding: 13px 23px;
+  border: 1px solid #6d3b1a;
+  color: #fff1ca;
+  background-color: #78421e;
+  box-shadow: 4px 5px 0 rgba(72, 34, 11, 0.2);
+  cursor: pointer;
+  font-family: "Noto Serif Tamil", serif;
+  font-size: 14px;
+  transition:
+    transform 0.25s ease,
+    background-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.submit-button:hover {
+  background-color: #9a5d28;
+  box-shadow: 6px 8px 0 rgba(72, 34, 11, 0.18);
+  transform: translateY(-3px);
+}
+
+.submit-button:active {
+  box-shadow: 2px 3px 0 rgba(72, 34, 11, 0.18);
+  transform: translateY(1px);
+}
+
+/* Form message from script.js */
+
+.form-message {
+  min-height: 20px;
+  margin: 0;
+  color: #6f4827;
+  font-size: 13px;
+}
+
+/* Bottom educational note */
+
+.contact-note-section {
+  padding: 30px 0;
+  border-top: 1px solid #cda66d;
+  border-bottom: 1px solid #cda66d;
+  color: #ead7a8;
+  text-align: center;
+  background-color: #623419;
+}
+
+.contact-note-section p {
+  max-width: 780px;
+  margin: 0 auto;
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+  .contact-page-grid {
+    grid-template-columns: 1fr;
+    gap: 42px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .contact-page-banner {
+    padding: 66px 0 58px !important;
+  }
+
+  .contact-page-banner h1 {
+    font-size: 30px;
+  }
+
+  .contact-banner-intro {
+    margin-top: 34px;
+    padding-top: 25px;
+  }
+
+  .contact-banner-intro > p:last-child {
+    font-size: 13px;
+    line-height: 1.9;
+  }
+
+  .contact-page-section {
+    padding: 55px 0 62px;
+  }
+
+  .contact-form-box {
+    padding: 24px 18px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .submit-button {
+    width: 100%;
+  }
+
+  .contact-note-section {
+    padding: 25px 0;
+  }
+}
+/* ==========================================
+   CONTACT — SHARE A MEMORY SECTION
+========================================== */
+
+.share-memory-section {
+  padding: 78px 0;
+  border-top: 1px solid #d0aa6d;
+  border-bottom: 1px solid #d0aa6d;
+  text-align: center;
+  background-color: #f7ead0;
+}
+
+.share-memory-content {
+  max-width: 780px;
+}
+
+.share-memory-icon {
+  display: grid;
+  width: 62px;
+  height: 62px;
+  margin: 0 auto 18px;
+  place-items: center;
+  border: 2px solid #8d552a;
+  border-radius: 50%;
+  color: #fff0c9;
+  background-color: #713d1d;
+  box-shadow:
+    inset 0 0 0 5px #d9ae64,
+    0 5px 0 rgba(84, 41, 15, 0.15);
+  font-family: "Noto Serif Tamil", serif;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.share-memory-content .section-small-title {
+  color: #a66b2e;
+}
+
+.share-memory-content h2 {
+  margin-top: 8px;
+  color: #59351d;
+  font-family: "Noto Serif Tamil", serif;
+  font-size: clamp(26px, 3vw, 37px);
+  line-height: 1.55;
+}
+
+.share-memory-content > p:last-of-type {
+  max-width: 680px;
+  margin: 21px auto 28px;
+  color: #77563b;
+  font-size: 14px;
+  line-height: 2;
+}
+
+.share-memory-button {
+  display: inline-block;
+  padding: 13px 24px;
+  border: 1px solid #6d3b1a;
+  color: #fff1ca;
+  background-color: #78421e;
+  box-shadow: 4px 5px 0 rgba(72, 34, 11, 0.2);
+  font-family: "Noto Serif Tamil", serif;
+  font-size: 14px;
+  text-decoration: none;
+  transition:
+    transform 0.25s ease,
+    background-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.share-memory-button:hover {
+  color: #fff7df;
+  background-color: #9a5d28;
+  box-shadow: 6px 8px 0 rgba(72, 34, 11, 0.18);
+  transform: translateY(-3px);
+}
+
+@media (max-width: 600px) {
+  .share-memory-section {
+    padding: 56px 0;
+  }
+
+  .share-memory-button {
+    width: 100%;
+  }
+}
+/* ==========================================
+   ABOUT PAGE — LONG VINTAGE BOOK BANNER
+========================================== */
+
+.about-page-banner {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  padding: 90px 0 78px !important;
+  border-bottom: 3px solid #9b6832 !important;
+  background-image:
+    linear-gradient(
+      rgba(57, 30, 16, 0.84),
+      rgba(57, 30, 16, 0.91)
+    ),
+    url("/images/antique-books.jpg") !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.about-page-banner .container {
+  position: relative;
+  z-index: 1;
+}
+
+.about-banner-small-text {
+  margin-bottom: 13px;
+  color: #e4bb6c !important;
+  text-align: center;
+  font-family: "Noto Serif Tamil", serif;
+  font-size: 14px;
+}
+
+.about-page-banner h1 {
+  margin-right: auto;
+  margin-left: auto;
+  color: #fff0c9 !important;
+  text-align: center;
+  font-family: "Noto Serif Tamil", serif;
+  font-size: clamp(34px, 5vw, 57px);
+  line-height: 1.4;
+}
+
+.about-page-banner .breadcrumb {
+  display: flex;
+  justify-content: center;
+  margin-top: 21px;
+  color: #ecd8a9 !important;
+}
+
+.about-page-banner .breadcrumb a {
+  color: #f1ca78 !important;
+}
+
+.about-banner-intro {
+  max-width: 770px;
+  margin: 48px auto 0;
+  padding-top: 32px;
+  border-top: 1px solid rgba(232, 190, 105, 0.45);
+  text-align: center;
+}
+
+.about-banner-intro .section-small-title {
+  margin-bottom: 10px;
+  color: #e6bc6b !important;
+  font-family: "Noto Serif Tamil", serif;
+  font-size: 13px;
+}
+
+.about-banner-intro h2 {
+  color: #fff0c9 !important;
+  font-family: "Noto Serif Tamil", serif;
+  font-size: clamp(26px, 3vw, 37px);
+  line-height: 1.52;
+}
+
+.about-banner-intro .gold-line {
+  background-color: #ddb15e !important;
+}
+
+.about-banner-intro > p:last-child {
+  max-width: 700px;
+  margin: 22px auto 0;
+  color: #ead7a7 !important;
+  font-size: 14px;
+  line-height: 2;
+}
+
+@media (max-width: 600px) {
+  .about-page-banner {
+    padding: 66px 0 58px !important;
+  }
+
+  .about-page-banner h1 {
+    font-size: 30px;
+  }
+
+  .about-banner-intro {
+    margin-top: 34px;
+    padding-top: 25px;
+  }
+
+  .about-banner-intro > p:last-child {
+    font-size: 13px;
+    line-height: 1.9;
+  }
+}
+/* ==========================================
+   ABOUT PAGE — VINTAGE PORTRAIT PHOTO
+========================================== */
+
+.profile-photo-box {
+  position: relative;
+  max-width: 390px;
+  margin: 0 auto;
+}
+
+/* Old archive photograph border */
+
+.profile-photo-frame {
+  position: relative;
+  overflow: hidden;
+  border: 9px solid #e1c38c;
+  outline: 1px solid #85502a;
+  background-color: #704129;
+  box-shadow:
+    8px 10px 0 rgba(75, 35, 13, 0.2),
+    0 16px 26px rgba(69, 30, 10, 0.15);
+}
+
+/* Soft vintage shadow over the photo */
+
+.profile-photo-frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 233, 177, 0.14),
+      transparent 42%,
+      rgba(48, 21, 8, 0.24)
+    );
+}
+
+/* Portrait image */
+
+.profile-photo-frame img {
+  display: block;
+  width: 100%;
+  min-height: 435px;
+  object-fit: cover;
+  object-position: center top;
+  filter: sepia(0.26) contrast(1.04) saturate(0.88);
+  transition:
+    transform 0.55s ease,
+    filter 0.55s ease;
+}
+
+/* Portrait lift / slight zoom */
+
+.profile-photo-box:hover .profile-photo-frame {
+  box-shadow:
+    0 19px 30px rgba(62, 27, 9, 0.25),
+    10px 13px 0 rgba(87, 41, 14, 0.18);
+  transform: translateY(-9px);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.profile-photo-box:hover .profile-photo-frame img {
+  filter: sepia(0.12) contrast(1.07) saturate(0.97);
+  transform: scale(1.045);
+}
+
+/* Caption below photo */
+
+.photo-caption {
+  position: relative;
+  z-index: 2;
+  max-width: 86%;
+  margin: -1px auto 0;
+  padding: 16px 15px;
+  border: 1px solid #97602f;
+  color: #f8e8bc;
+  text-align: center;
+  background-color: #663617;
+  box-shadow: 4px 5px 0 rgba(74, 34, 11, 0.16);
+}
+
+.photo-caption h3 {
+  color: #fff0c9;
+  font-family: "Noto Serif Tamil", serif;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.photo-caption p {
+  margin-top: 5px;
+  color: #dfb767;
+  font-family: "Noto Serif Tamil", serif;
+  font-size: 12px;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .profile-photo-box {
+    max-width: 330px;
+  }
+
+  .profile-photo-frame img {
+    min-height: 365px;
+  }
+}
+/* TEMPORARY PHOTO TEST */
+
+.profile-photo-box {
+  display: block !important;
+  width: 100% !important;
+  max-width: 390px !important;
+  margin: 0 auto !important;
+}
+
+.thamizhannal-test-photo {
+  display: block !important;
+  visibility: visible !important;
+  width: 100% !important;
+  height: 450px !important;
+  min-height: 450px !important;
+  max-height: none !important;
+  opacity: 1 !important;
+  object-fit: cover !important;
+  object-position: center top !important;
+  border: 9px solid #e1c38c !important;
+  outline: 1px solid #85502a !important;
+  background-color: #704129 !important;
+  box-shadow: 8px 10px 0 rgba(75, 35, 13, 0.2) !important;
+}
+/* ==========================================
+   REACT ADDITIONS — Flipbook reader, Lightbox,
+   Book reader page header.
+   ========================================== */
+
+.book-reader-section {
+  padding: 60px 0 90px;
+  background: var(--main-bg);
+}
+
+.book-reader-heading {
+  text-align: center;
+  max-width: 700px;
+  margin: 18px auto 40px;
+}
+
+.book-reader-heading h1 {
+  font-family: "Noto Serif Tamil", serif;
+  color: var(--dark);
+  font-size: 34px;
+  margin: 6px 0 14px;
+}
+
+.book-reader-heading .gold-line.center-line {
+  margin: 0 auto 16px;
+}
+
+.flipbook-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+  margin-top: 10px;
+}
+
+.flipbook {
+  margin: 0 auto;
+  box-shadow: 0 20px 45px rgba(62, 33, 20, 0.25);
+}
+
+.flipbook-page {
+  position: relative;
+  background: var(--paper);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.flipbook-page img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  user-select: none;
+}
+
+.flipbook-page-blank {
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    45deg,
+    #f1e6d2,
+    #f1e6d2 10px,
+    #ecdcc0 10px,
+    #ecdcc0 20px
+  );
+}
+
+.flipbook-page-number {
+  position: absolute;
+  bottom: 8px;
+  right: 12px;
+  font-size: 11px;
+  color: var(--muted-text);
+  background: rgba(255, 253, 248, 0.85);
+  padding: 1px 6px;
+  border-radius: 3px;
+}
+
+.flipbook-controls {
+  display: flex;
+  gap: 14px;
+}
+
+.flipbook-controls button {
+  border: 1px solid var(--maroon);
+  background: var(--paper);
+  color: var(--maroon);
+  font-family: "Noto Serif Tamil", serif;
+  padding: 9px 18px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+.flipbook-controls button:hover {
+  background: var(--maroon);
+  color: #fff0d8;
+}
+
+.flipbook-status {
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  text-align: center;
+  color: var(--muted-text);
+  border: 1px dashed var(--border);
+  border-radius: 8px;
+  padding: 40px 20px;
+  max-width: 500px;
+  margin: 0 auto;
+  background: var(--paper);
+}
+
+.flipbook-missing code {
+  background: var(--main-bg);
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: var(--maroon);
+}
+
+.flipbook-hint {
+  font-size: 13px;
+}
+
+.flipbook-spinner {
+  width: 34px;
+  height: 34px;
+  border: 3px solid var(--border);
+  border-top-color: var(--maroon);
+  border-radius: 50%;
+  animation: flipbook-spin 0.9s linear infinite;
+}
+
+@keyframes flipbook-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Lightbox */
+
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(24, 12, 6, 0.86);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  padding: 24px;
+}
+
+.lightbox-box {
+  position: relative;
+  max-width: 900px;
+  max-height: 88vh;
+  background: var(--paper);
+  border: 6px solid #dfc18b;
+  overflow: auto;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+.lightbox-box img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.lightbox-caption {
+  padding: 14px 18px 18px;
+  text-align: center;
+}
+
+.lightbox-caption h3 {
+  font-family: "Noto Serif Tamil", serif;
+  color: var(--dark);
+  margin-bottom: 4px;
+}
+
+.lightbox-caption p {
+  color: var(--muted-text);
+  font-size: 14px;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 34px;
+  height: 34px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(20, 10, 5, 0.75);
+  color: #fff0d8;
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.memory-card {
+  cursor: pointer;
+}
