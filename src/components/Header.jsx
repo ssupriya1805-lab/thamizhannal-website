@@ -7,6 +7,8 @@ const navItems = [
   { to: "/books", label: "நூல்கள்" },
   { to: "/articles", label: "கட்டுரைகள்" },
   { to: "/gallery", label: "வாழ்க்கைப் பயணம்" },
+  { to: "/awards", label: "விருதுகள்" },
+  { to: "/remembrance", label: "நினைவேந்தல்" },
   { to: "/contact", label: "தொடர்புக்கு" },
 ];
 

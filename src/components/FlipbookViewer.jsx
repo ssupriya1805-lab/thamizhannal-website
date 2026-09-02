@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, forwardRef } from "react";
+import { useEffect, useRef, useState, forwardRef, useCallback } from "react";
 import HTMLFlipBook from "react-pageflip";
 import * as pdfjsLib from "pdfjs-dist";
 import pdfjsWorker from "pdfjs-dist/build/pdf.worker.mjs?url";
@@ -7,6 +7,7 @@ pdfjsLib.GlobalWorkerOptions.workerSrc = pdfjsWorker;
 
 const Page = forwardRef(({ src, pageNumber }, ref) => (
   <div className="flipbook-page" ref={ref}>
+    <div className="flipbook-page-shade" />
     {src ? (
       <img src={src} alt={`பக்கம் ${pageNumber}`} draggable={false} />
     ) : (
@@ -17,31 +18,27 @@ const Page = forwardRef(({ src, pageNumber }, ref) => (
 ));
 Page.displayName = "Page";
 
-export default function FlipbookViewer({ pdfUrl, title }) {
+/**
+ * Renders a PDF as a page-turning flipbook. If the PDF can't be fetched
+ * for rendering (e.g. the host doesn't send CORS headers, which blocks
+ * pdf.js from reading the bytes even though the file itself is public),
+ * this calls onFail so the parent can fall back to a plain embed instead
+ * of showing a permanently broken flipbook.
+ */
+export default function FlipbookViewer({ pdfUrl, title, onFail }) {
   const [pages, setPages] = useState([]);
-  const [status, setStatus] = useState("loading"); // loading | ready | missing | error
+  const [loading, setLoading] = useState(true);
+  const [current, setCurrent] = useState(1);
+  const [fullscreen, setFullscreen] = useState(false);
   const flipBookRef = useRef(null);
+  const wrapRef = useRef(null);
 
   useEffect(() => {
     let cancelled = false;
 
-    if (!pdfUrl) {
-      setStatus("missing");
-      return;
-    }
-
     async function renderPdf() {
       try {
-        setStatus("loading");
-
-        // First check the file actually exists, so a not-yet-added
-        // book shows a friendly "coming soon" state instead of an error.
-        const head = await fetch(pdfUrl, { method: "HEAD" });
-        if (!head.ok) {
-          if (!cancelled) setStatus("missing");
-          return;
-        }
-
+        setLoading(true);
         const loadingTask = pdfjsLib.getDocument(pdfUrl);
         const pdf = await loadingTask.promise;
         const renderedPages = [];
@@ -50,7 +47,7 @@ export default function FlipbookViewer({ pdfUrl, title }) {
           if (cancelled) return;
 
           const page = await pdf.getPage(pageNum);
-          const viewport = page.getViewport({ scale: 1.4 });
+          const viewport = page.getViewport({ scale: 1.5 });
 
           const canvas = document.createElement("canvas");
           canvas.width = viewport.width;
@@ -63,11 +60,11 @@ export default function FlipbookViewer({ pdfUrl, title }) {
 
         if (!cancelled) {
           setPages(renderedPages);
-          setStatus("ready");
+          setLoading(false);
         }
       } catch (err) {
-        console.error("PDF load failed:", err);
-        if (!cancelled) setStatus("error");
+        console.error("Flipbook render failed:", err);
+        if (!cancelled) onFail?.();
       }
     }
 
@@ -75,85 +72,83 @@ export default function FlipbookViewer({ pdfUrl, title }) {
     return () => {
       cancelled = true;
     };
-  }, [pdfUrl]);
+  }, [pdfUrl, onFail]);
 
-  if (status === "loading") {
-    return (
-      <div className="flipbook-status">
-        <div className="flipbook-spinner"></div>
-        <p>“{title}” புத்தகம் ஏற்றப்படுகிறது…</p>
-      </div>
-    );
-  }
+  const goPrev = useCallback(
+    () => flipBookRef.current?.pageFlip()?.flipPrev(),
+    []
+  );
+  const goNext = useCallback(
+    () => flipBookRef.current?.pageFlip()?.flipNext(),
+    []
+  );
 
-  if (status === "missing") {
-    return (
-      <div className="flipbook-status flipbook-missing">
-        <p style={{ color: "#3a1f08", fontWeight: 600 }}>
-          இந்த நூலின் PDF இன்னும் சேர்க்கப்படவில்லை.
-        </p>
-        <p className="flipbook-hint" style={{ color: "#5a4326" }}>
-          சேர்க்க:{" "}
-          <code
-            style={{
-              background: "#fff",
-              color: "#3a1f08",
-              padding: "2px 8px",
-              borderRadius: "4px",
-              border: "1px solid #d8c39a",
-            }}
-          >
-            {pdfUrl}
-          </code>{" "}
-          என்ற பாதையில் PDF கோப்பைப் போடவும்.
-        </p>
-      </div>
-    );
-  }
+  // Arrow-key navigation while the flipbook is on screen.
+  useEffect(() => {
+    function onKeyDown(e) {
+      if (e.key === "ArrowLeft") goPrev();
+      if (e.key === "ArrowRight") goNext();
+      if (e.key === "Escape" && fullscreen) setFullscreen(false);
+    }
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [goPrev, goNext, fullscreen]);
 
-  if (status === "error") {
+  if (loading) {
     return (
-      <div className="flipbook-status flipbook-missing">
-        <p style={{ color: "#3a1f08", fontWeight: 600 }}>
-          இந்த PDF-ஐத் திறக்க முடியவில்லை. கோப்பு சரியானதா என்று
-          சரிபார்க்கவும்.
-        </p>
+      <div className="pdf-viewer-loading">
+        <div className="pdf-viewer-spinner"></div>
+        <p>"{title}" புத்தகம் ஏற்றப்படுகிறது…</p>
       </div>
     );
   }
 
   return (
-    <div className="flipbook-wrap">
-      <HTMLFlipBook
-        width={420}
-        height={594}
-        size="stretch"
-        minWidth={280}
-        maxWidth={640}
-        minHeight={400}
-        maxHeight={900}
-        showCover={true}
-        mobileScrollSupport={true}
-        className="flipbook"
-        ref={flipBookRef}
-      >
-        {pages.map((src, index) => (
-          <Page src={src} pageNumber={index + 1} key={index} />
-        ))}
-      </HTMLFlipBook>
+    <div
+      className={`flipbook-wrap${fullscreen ? " flipbook-fullscreen" : ""}`}
+      ref={wrapRef}
+    >
+      <div className="flipbook-stage">
+        <HTMLFlipBook
+          width={420}
+          height={594}
+          size="stretch"
+          minWidth={260}
+          maxWidth={720}
+          minHeight={380}
+          maxHeight={1000}
+          showCover={true}
+          mobileScrollSupport={true}
+          className="flipbook"
+          ref={flipBookRef}
+          onFlip={(e) => setCurrent(e.data + 1)}
+        >
+          {pages.map((src, index) => (
+            <Page src={src} pageNumber={index + 1} key={index} />
+          ))}
+        </HTMLFlipBook>
+      </div>
 
       <div className="flipbook-controls">
-        <button
-          type="button"
-          onClick={() => flipBookRef.current?.pageFlip()?.flipPrev()}
-        >
+        <button type="button" onClick={goPrev} aria-label="முந்தைய பக்கம்">
           ← முந்தைய பக்கம்
         </button>
+
+        <span className="flipbook-page-count">
+          பக்கம் {current} / {pages.length}
+        </span>
+
+        <button type="button" onClick={goNext} aria-label="அடுத்த பக்கம்">
+          அடுத்த பக்கம் →
+        </button>
+
         <button
           type="button"
-          onClick={() => flipBookRef.current?.pageFlip()?.flipNext()}
+          className="flipbook-fullscreen-btn"
+          onClick={() => setFullscreen((f) => !f)}
+          aria-label={fullscreen ? "முழுத்திரையை விட்டு வெளியேறு" : "முழுத்திரையில் திற"}
         >
-          அடுத்த பக்கம் →
+          {fullscreen ? "✕ மூடு" : "⤢ முழுத்திரை"}
         </button>
       </div>
     </div>

@@ -1,36 +1,46 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import awardSections, { legacyContributions } from "../data/awards";
+import awardSections from "../data/awards";
 import Lightbox from "../components/Lightbox";
 import useReveal from "../hooks/useReveal";
 
 function AwardCard({ item, onOpen }) {
   const [ref, revealed] = useReveal();
+
   return (
     <article
       ref={ref}
-      className={`memory-card vintage-memory-reveal${revealed ? " show-memory" : ""}`}
-      style={item.image ? { backgroundImage: `url(${item.image})`, backgroundSize: "cover", backgroundPosition: "center" } : undefined}
-      onClick={() => onOpen(item)}
+      className={`memory-card vintage-memory-reveal${
+        revealed ? " show-memory" : ""
+      }`}
+      style={
+        item.image
+          ? {
+              backgroundImage: `url(${item.image})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }
+          : undefined
+      }
+      onClick={() => item.image && onOpen(item)}
       role="button"
       tabIndex={0}
     >
-      <div className="memory-overlay">
-        <p>{item.tag}</p>
-        <h3>{item.title || item.caption}</h3>
-      </div>
+      {item.image ? (
+        <div className="memory-overlay">
+          <p>{item.tag}</p>
+          <h3>{item.title || item.caption}</h3>
+        </div>
+      ) : (
+        <div className="image-slot-empty">
+          <span>
+            {item.tag}
+            <br />
+            படம் இன்னும் இல்லை
+          </span>
+        </div>
+      )}
     </article>
-  );
-}
-
-function LegacyCard({ item }) {
-  const [ref, revealed] = useReveal();
-  return (
-    <div ref={ref} className={`contribution-card about-vintage-reveal${revealed ? " show-about-vintage" : ""}`}>
-      <span>{item.num}</span>
-      <h3>{item.title}</h3>
-      <p>{item.text}</p>
-    </div>
   );
 }
 
@@ -39,49 +49,46 @@ export default function Awards() {
 
   return (
     <>
-      <section className="page-banner awards-page-banner">
+      <section className="page-banner gallery-page-banner">
         <div className="container">
           <p>தமிழ் மொழிக்காக ஆற்றிய அரிய பணிகள்</p>
-          <h1>விருதுகளும் பங்களிப்புகளும்</h1>
+          <h1>விருதுகள்</h1>
+
           <div className="breadcrumb">
             <span>முகப்பு</span>
             <span>›</span>
             <span>விருதுகள்</span>
           </div>
+
+          <div className="gallery-banner-intro">
+            <p className="section-small-title">அங்கீகாரங்கள்</p>
+            <h2>தமிழ்ப்பணிக்குக் கிடைத்த பெருமைகள்</h2>
+            <div className="gold-line center-line"></div>
+            <p className="gallery-intro">
+              தமிழ் மொழி, இலக்கியம் மற்றும் ஆய்வுப் பணிக்காக தமிழண்ணல்
+              அவர்கள் பெற்ற பாராட்டுகளையும், உலகத் தமிழர் அங்கீகாரங்களையும்
+              நினைவுகூரும் தொகுப்பு.
+            </p>
+          </div>
         </div>
       </section>
 
-      {awardSections.map((section) => (
-        <section className="gallery-page-section" key={section.id}>
-          <div className="container">
-            <div className="section-heading">
-              <p className="section-small-title">{section.smallTitle}</p>
-              <h2>{section.title}</h2>
-              <div className="gold-line center-line"></div>
-            </div>
-
-            <div className="gallery-page-grid">
-              {section.items.map((item) => (
-                <AwardCard item={item} onOpen={setActive} key={item.id} />
-              ))}
-            </div>
-          </div>
-        </section>
-      ))}
-
-      <section className="contribution-section">
+      <section className="gallery-page-section">
         <div className="container">
-          <div className="section-heading">
-            <p className="section-small-title">நிலைத்த பணிகள்</p>
-            <h2>தமிழுக்கு அவர் விட்டுச் சென்ற மரபு</h2>
-            <div className="gold-line center-line"></div>
-          </div>
+          {awardSections.map((section) => (
+            <div className="gallery-subsection" key={section.id}>
+              <div className="section-heading">
+                <h2>{section.title}</h2>
+                <div className="gold-line center-line"></div>
+              </div>
 
-          <div className="contribution-grid">
-            {legacyContributions.map((item) => (
-              <LegacyCard item={item} key={item.num} />
-            ))}
-          </div>
+              <div className="gallery-page-grid">
+                {section.items.map((item) => (
+                  <AwardCard item={item} onOpen={setActive} key={item.id} />
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -92,8 +99,10 @@ export default function Awards() {
         </div>
       </section>
 
-      <div className="center-button">
-        <Link to="/gallery" className="outline-button">← வாழ்க்கைப் பயணத்திற்குத் திரும்ப</Link>
+      <div className="center-button" style={{ margin: "10px 0 60px" }}>
+        <Link to="/gallery" className="outline-button">
+          ← வாழ்க்கைப் பயணத்திற்குத் திரும்ப
+        </Link>
       </div>
 
       <Lightbox item={active} onClose={() => setActive(null)} />

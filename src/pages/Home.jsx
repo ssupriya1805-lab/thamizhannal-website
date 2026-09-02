@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
 import books from "../data/books";
+import articles from "../data/articles";
 import useReveal from "../hooks/useReveal";
+import HomeMedia from "../components/HomeMedia";
+import PdfCoverThumb from "../components/PdfCoverThumb";
 
 function IntroSection() {
   const [ref, revealed] = useReveal();
@@ -37,6 +40,53 @@ const coverClasses = [
   "book-cover-three",
 ];
 
+function HomeArticleTeaser() {
+  const [ref, revealed] = useReveal();
+  // Feature the real memorial article (matches thamizhannal.org's own
+  // home page "கட்டுரை" section) rather than whichever article happens
+  // to be first in the list.
+  const featured =
+    articles.find((a) => a.slug === "thamizhaaga-vaazhntha-annalukku-agavai-thonnooru") ||
+    articles[0];
+  if (!featured) return null;
+
+  return (
+    <section
+      ref={ref}
+      className={`intro-section vintage-reveal${
+        revealed ? " show-vintage" : ""
+      }`}
+    >
+      <div className="container">
+        <div className="section-heading">
+          <p className="section-small-title">கட்டுரை</p>
+          <h2>{featured.title}</h2>
+          {featured.byline && (
+            <p className="home-article-byline">
+              {featured.byline.name}
+              {featured.byline.designation && (
+                <span> · {featured.byline.designation}</span>
+              )}
+            </p>
+          )}
+          <div className="gold-line center-line"></div>
+        </div>
+
+        <div className="home-article-teaser">
+          <p>{featured.excerpt}</p>
+          <Link
+            to={`/articles/${featured.slug}`}
+            className="read-more-link"
+            style={{ marginTop: "14px", display: "inline-block" }}
+          >
+            தொடர்ந்து படிக்க →
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function BooksSection() {
   const [ref, revealed] = useReveal();
   const featured = books.slice(0, 3);
@@ -57,18 +107,14 @@ function BooksSection() {
           {featured.map((book, index) => (
             <div className="book-card" key={book.id}>
               <div
-                className={`book-cover ${coverClasses[index % coverClasses.length]}`}
-                style={{
-                  backgroundImage: `url(${book.coverImage})`,
-                }}
+                className={`book-cover book-cover-pdf ${coverClasses[index % coverClasses.length]}`}
               >
-                <span>{book.categoryLabel}</span>
-                <strong>{book.title}</strong>
+                <PdfCoverThumb pdfUrl={book.pdfUrl} title={book.title} />
               </div>
 
               <div className="book-details">
                 <h3>{book.title}</h3>
-                <p>{book.description}</p>
+                <p>{book.categoryLabel}</p>
               </div>
             </div>
           ))}
@@ -135,21 +181,21 @@ export default function Home() {
             <Link to="/about" className="copper-button">
               காப்பகத்தைத் திறக்க
             </Link>
+
+            <div className="hero-portrait-overlap">
+              <img src="/images/thamizhannal-portrait.jpg" alt="மூதறிஞர் தமிழண்ணல்" />
+            </div>
           </div>
 
           <p className="archive-id">
             தமிழ் மரபுக் காப்பகம் • பதிவு எண். TA-1928-2015
           </p>
-
-          <div className="tamilannal-portrait-box">
-            <div className="portrait-copper-corner corner-top-left"></div>
-            <div className="portrait-copper-corner corner-bottom-left"></div>
-            <div className="portrait-copper-corner corner-bottom-right"></div>
-          </div>
         </div>
       </section>
 
       <IntroSection />
+      <HomeMedia />
+      <HomeArticleTeaser />
       <BooksSection />
     </>
   );

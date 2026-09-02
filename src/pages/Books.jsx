@@ -1,26 +1,19 @@
 import { Link } from "react-router-dom";
 import books, { categories } from "../data/books";
+import PdfCoverThumb from "../components/PdfCoverThumb";
 
-const coverClasses = ["cover-maroon", "cover-brown", "cover-green", "cover-blue", "cover-purple", "cover-orange"];
-
-function BookCard({ book, index }) {
+function BookCard({ book }) {
   return (
     <article className="full-book-card" key={book.id}>
-      <Link to={`/books/${book.slug}`} style={{ display: "block" }}>
-        <div
-          className={`full-book-cover ${coverClasses[index % coverClasses.length]}`}
-          style={{ backgroundImage: `url(${book.coverImage})` }}
-        >
-          <span>{book.categoryLabel}</span>
-          <strong>{book.title}</strong>
-          <small>தமிழண்ணல்</small>
+      <Link to={`/books/${book.slug}`} className="full-book-cover-link">
+        <div className="full-book-cover full-book-cover-pdf">
+          <PdfCoverThumb pdfUrl={book.pdfUrl} title={book.title} />
         </div>
       </Link>
 
       <div className="full-book-content">
         <p className="book-category">{book.categoryLabel}</p>
         <h3>{book.title}</h3>
-        <p>{book.description}</p>
         <Link to={`/books/${book.slug}`} className="book-read-button">
           புத்தகத்தைப் படிக்க
         </Link>
@@ -30,6 +23,9 @@ function BookCard({ book, index }) {
 }
 
 export default function Books() {
+  // ஒவ்வொரு category-க்கும் உரிய நூல்களை தனித் தனியாகப் பிரிக்கிறோம்,
+  // அதனால் ஒவ்வொரு பிரிவும் தன் subheading-உடன், அதற்குக் கீழே
+  // அதன் நூல் அட்டைப் படங்களுடன் காட்டப்படும்.
   const booksByCategory = categories.map((cat) => ({
     ...cat,
     items: books.filter((book) => book.category === cat.id),
@@ -64,33 +60,46 @@ export default function Books() {
 
       <section className="books-intro-section">
         <div className="container">
+          {/* குறுக்கு-வழி வகைப் பிரிவுகள் — எண்ணிக்கையுடன் */}
           <div className="book-filter">
             {booksByCategory.map((cat) => (
-              <a key={cat.id} href={`#${cat.id}`} className="filter-button">
+              <a
+                key={cat.id}
+                href={`#${cat.id}`}
+                className="filter-button"
+              >
                 {cat.label} ({cat.items.length})
               </a>
             ))}
           </div>
 
+          {/* ஒவ்வொரு பிரிவும் தன் subheading + அதற்குக் கீழே நூல் அட்டைகள் */}
           {booksByCategory.map((cat) => (
-            <div key={cat.id} id={cat.id} style={{ marginTop: "44px" }}>
-              <div
-                className="section-heading"
-                style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", textAlign: "left" }}
-              >
-                <h2 style={{ margin: 0 }}>{cat.label}</h2>
-                <span style={{ opacity: 0.6, fontSize: "0.9rem" }}>{cat.items.length} நூல்கள்</span>
+            <div key={cat.id} id={cat.id} style={{ marginTop: "56px" }}>
+              <div className="section-heading">
+                <h2>
+                  {cat.label}{" "}
+                  <span style={{ opacity: 0.55, fontSize: "0.7em" }}>
+                    ({cat.items.length})
+                  </span>
+                </h2>
+                <div className="gold-line center-line"></div>
               </div>
-              <div className="gold-line"></div>
 
               {cat.items.length > 0 ? (
                 <div className="all-books-grid">
-                  {cat.items.map((book, index) => (
-                    <BookCard book={book} index={index} key={book.id} />
+                  {cat.items.map((book) => (
+                    <BookCard book={book} key={book.id} />
                   ))}
                 </div>
               ) : (
-                <p style={{ padding: "16px 0", opacity: 0.7 }}>
+                <p
+                  style={{
+                    padding: "16px 0",
+                    opacity: 0.7,
+                    textAlign: "center",
+                  }}
+                >
                   இந்தப் பிரிவில் நூல்கள் விரைவில் சேர்க்கப்படும்.
                 </p>
               )}
@@ -110,7 +119,9 @@ export default function Books() {
             </p>
           </div>
 
-          <Link to="/contact" className="hero-button">தொடர்புக்கு</Link>
+          <Link to="/contact" className="hero-button">
+            தொடர்புக்கு
+          </Link>
         </div>
       </section>
     </>

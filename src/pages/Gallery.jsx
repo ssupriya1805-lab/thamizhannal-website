@@ -5,6 +5,7 @@ import useReveal from "../hooks/useReveal";
 
 function GalleryCard({ item, onOpen }) {
   const [ref, revealed] = useReveal();
+
   return (
     <article
       ref={ref}
@@ -20,14 +21,24 @@ function GalleryCard({ item, onOpen }) {
             }
           : undefined
       }
-      onClick={() => onOpen(item)}
+      onClick={() => item.image && onOpen(item)}
       role="button"
       tabIndex={0}
     >
-      <div className="memory-overlay">
-        <p>{item.tag}</p>
-        <h3>{item.title || item.caption}</h3>
-      </div>
+      {item.image ? (
+        <div className="memory-overlay">
+          <p>{item.tag}</p>
+          <h3>{item.title || item.caption}</h3>
+        </div>
+      ) : (
+        <div className="image-slot-empty">
+          <span>
+            {item.tag}
+            <br />
+            படம் இன்னும் இல்லை
+          </span>
+        </div>
+      )}
     </article>
   );
 }
@@ -61,22 +72,24 @@ export default function Gallery() {
         </div>
       </section>
 
-      {gallerySections.map((section) => (
-        <section className="gallery-page-section" key={section.id}>
-          <div className="container">
-            <div className="section-heading">
-              <h2>{section.title}</h2>
-              <div className="gold-line center-line"></div>
-            </div>
+      <section className="gallery-page-section">
+        <div className="container">
+          {gallerySections.map((section) => (
+            <div className="gallery-subsection" key={section.id}>
+              <div className="section-heading">
+                <h2>{section.title}</h2>
+                <div className="gold-line center-line"></div>
+              </div>
 
-            <div className="gallery-page-grid">
-              {section.items.map((item) => (
-                <GalleryCard item={item} onOpen={setActive} key={item.id} />
-              ))}
+              <div className="gallery-page-grid">
+                {section.items.map((item) => (
+                  <GalleryCard item={item} onOpen={setActive} key={item.id} />
+                ))}
+              </div>
             </div>
-          </div>
-        </section>
-      ))}
+          ))}
+        </div>
+      </section>
 
       <section className="memory-quote-section">
         <div className="container memory-quote-content">

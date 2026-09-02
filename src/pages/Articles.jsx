@@ -1,52 +1,6 @@
 import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
-
-const articles = [
-  {
-    id: "art1",
-    day: "12",
-    month: "ஆக",
-    year: "2026",
-    type: "தமிழ் இலக்கியம்",
-    readingTime: "ஆய்வுப் பதிவு • 5 நிமிட வாசிப்பு",
-    title: "தமிழ் இலக்கியத்தில் அறத்தின் இடம்",
-    excerpt:
-      "சங்க இலக்கியம் மனித வாழ்வில் அறம், அன்பு மற்றும் ஒழுக்கம் ஆகியவற்றுக்கு வழங்கிய முக்கியத்துவத்தை எடுத்துரைக்கும் கட்டுரை.",
-  },
-  {
-    id: "art2",
-    day: "29",
-    month: "ஜூலை",
-    year: "2026",
-    type: "தமிழ் இலக்கணம்",
-    readingTime: "ஆய்வுப் பதிவு • 6 நிமிட வாசிப்பு",
-    title: "தொல்காப்பியத்தின் மொழியியல் பார்வை",
-    excerpt:
-      "தமிழ் இலக்கண மரபின் அடிப்படையாக விளங்கும் தொல்காப்பியம், மொழியியல் பார்வையில் எவ்வளவு முக்கியமானது என்பதை விளக்கும் கட்டுரை.",
-  },
-  {
-    id: "art3",
-    day: "15",
-    month: "ஜூலை",
-    year: "2026",
-    type: "சங்க இலக்கியம்",
-    readingTime: "ஆய்வுப் பதிவு • 4 நிமிட வாசிப்பு",
-    title: "அகநானூறு காட்டும் அக வாழ்க்கை",
-    excerpt:
-      "அகநானூறு பாடல்களில் இடம்பெறும் காதல், பிரிவு, காத்திருப்பு மற்றும் இயற்கை சார்ந்த வாழ்க்கைக் காட்சிகளைப் பற்றிய பதிவு.",
-  },
-  {
-    id: "art4",
-    day: "02",
-    month: "ஜூன்",
-    year: "2026",
-    type: "தமிழ்க் கல்வி",
-    readingTime: "ஆய்வுப் பதிவு • 7 நிமிட வாசிப்பு",
-    title: "கல்வியும் தாய்மொழியும்",
-    excerpt:
-      "மாணவர்களின் சிந்தனைத் திறன், புரிதல் மற்றும் பண்பாட்டு உணர்வைத் தாய்மொழி வழிக்கல்வி வளர்க்கும் விதம் பற்றிய கட்டுரை.",
-  },
-];
+import articles from "../data/articles";
 
 export default function Articles() {
   const [query, setQuery] = useState("");
@@ -58,6 +12,17 @@ export default function Articles() {
       `${a.title} ${a.excerpt} ${a.type}`.toLowerCase().includes(q)
     );
   }, [query]);
+
+  // "கட்டுரை வகைகள்" பட்டியலில் உள்ள எண்ணிக்கைகள் — articles.js-ல் உள்ள
+  // ஒவ்வொரு கட்டுரையின் type-ஐ வைத்தே தானாகக் கணக்கிடப்படுகின்றன, எனவே
+  // புதிய கட்டுரை சேர்த்தாலோ நீக்கினாலோ இங்கு தட்டச்சு செய்ய வேண்டியதில்லை.
+  const typeCounts = useMemo(() => {
+    const counts = new Map();
+    articles.forEach((a) => {
+      counts.set(a.type, (counts.get(a.type) || 0) + 1);
+    });
+    return Array.from(counts.entries());
+  }, []);
 
   return (
     <>
@@ -126,9 +91,12 @@ export default function Articles() {
                     <p className="article-reading-time">{article.readingTime}</p>
                     <h3>{article.title}</h3>
                     <p>{article.excerpt}</p>
-                    <button className="article-read-button">
+                    <Link
+                      to={`/articles/${article.slug}`}
+                      className="article-read-button"
+                    >
                       தொடர்ந்து படிக்க →
-                    </button>
+                    </Link>
                   </div>
                 </article>
               ))}
@@ -137,10 +105,18 @@ export default function Articles() {
             <aside className="articles-sidebar">
               <div className="sidebar-box">
                 <h3>கட்டுரை வகைகள்</h3>
-                <a href="#!">தமிழ் இலக்கியம் <span>01</span></a>
-                <a href="#!">சங்க இலக்கியம் <span>01</span></a>
-                <a href="#!">தமிழ் இலக்கணம் <span>01</span></a>
-                <a href="#!">தமிழ்க் கல்வி <span>01</span></a>
+                {typeCounts.map(([type, count]) => (
+                  <a
+                    href="#!"
+                    key={type}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setQuery(type);
+                    }}
+                  >
+                    {type} <span>{String(count).padStart(2, "0")}</span>
+                  </a>
+                ))}
               </div>
 
               <div className="sidebar-box quote-box">
